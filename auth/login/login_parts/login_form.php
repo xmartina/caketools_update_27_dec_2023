@@ -22,14 +22,7 @@
                 }
                 window.onload = redirectToDashboard;
             </script>
-        <?php }
-            elseif($_SERVER['REQUEST_URI'] == '/auth/login/'){
-                if (isset($_SESSION['user_id'])) {
-                    header("Location: " . siteUrl . "users");
-                    exit();
-                }
-            }
-        ?>
+        <?php } ?>
     <fieldset><input id="name" name="user_input" tabindex="1" aria-required="true" required="" type="text" placeholder="User name or Email"></fieldset>
     <fieldset class="mb24"> <input id="showpassword" name="password" tabindex="2" aria-required="true"  type="password" placeholder="Password" required="">
         <span class="btn-show-pass "><i class="far fa-eye-slash"></i></span></fieldset>
