@@ -1,5 +1,6 @@
 <?php
 include_once (rootDir.'includes/db_connect.php');
+const siteUrl = 'https://caketoolnftmarketplace.com/';
 if (isset($_POST['register'])) {
     // Collect user input
     $user_name = $_POST['user_name'];
