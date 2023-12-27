@@ -1,10 +1,10 @@
-<div class="modal fade" id="metaMax">
+<div class="modal fade" id="metaMask">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
 
             <!-- Modal Header -->
             <div class="modal-header">
-                <h4 class="modal-title">Modal Title</h4>
+                <h4 class="modal-title">Meta Max</h4>
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
 
