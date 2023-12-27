@@ -27,7 +27,7 @@
                         <div class="col-md-12">
                             <div class="tf-heading style-5">
                                 <h4 class="heading">Creat, Sell Or Collect Digital Item</h4>
-                                <p class="sub-heading">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. </p>
+                                <p class="sub-heading">Login to unleash your digital journey. Your key to the NFT realm, where each login is a brushstroke of creativity on the canvas of your aspirations. </p>
                             </div>
                         </div>
                         <div class="col-xl-6 col-lg-8 col-md-12">
