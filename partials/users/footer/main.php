@@ -122,6 +122,7 @@
 <script src="/assets/js/shortcodes.js"></script>
 <script src="/assets/js/main.js"></script>
 <script src="/assets/js/front_footer_js.js"></script>
+<script src="/assets/js/user_footer_js.js"></script>
 
 </body>
 
