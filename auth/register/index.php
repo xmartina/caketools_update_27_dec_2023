@@ -25,7 +25,7 @@ include_once (rootDir.'partials/auth/header.php');
         <div class="row justify-content-center">
             <div class="col-md-12">
                 <div class="tf-heading style-2">
-                    <h4 class="heading">Sign Up To NFT</h4>
+                    <h4 class="heading">Sign Up To <?=siteName?></h4>
                 </div>
             </div>
             <div class="col-xl-6 col-lg-9 col-md-12">
