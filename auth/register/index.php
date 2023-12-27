@@ -8,10 +8,7 @@ include_once (rootDir.'includes/generalConfig.php');
 include_once (rootDir.'includes/auth.php');
 include_once (rootDir.'partials/auth/header.php');
 
-if (isset($_SESSION['user_id'])) {
-    header("Location:" .siteUrl."users");
-    exit();
-}
+
 ?>
 <section class="tf-page-title style-2">
     <div class="tf-container">
