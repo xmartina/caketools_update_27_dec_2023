@@ -56,7 +56,7 @@ elseif (isset($_POST['login'])) {
         if (password_verify($password, $row['password'])) {
             // Redirect to the dashboard
             $_SESSION['user_id'] = $row['id'];
-            header("Location: /auth/login?login-success");
+            header("Location:".siteUrl. "auth/login?login-success");
 //            sleep(3);
 //            $_SESSION['user_id'] = $row['id'];
 //            header("Location:". siteUrl. "users/dashboard");
