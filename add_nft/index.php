@@ -11,10 +11,10 @@ include_once (rootDir.'partials/front/header/main.php');
         <div class="row">
             <div class="col-md-12">
 
-                <ul class="breadcrumbs">
-                    <li><a href="index.html">Home</a></li>
-                    <li>Create</li>
-                </ul>
+<!--                <ul class="breadcrumbs">-->
+<!--                    <li><a href="index.html">Home</a></li>-->
+<!--                    <li>Create</li>-->
+<!--                </ul>-->
 
                 <h4 class="page-title-heading">Add New NFT</h4>
 
@@ -31,10 +31,10 @@ include_once (rootDir.'partials/front/header/main.php');
                     <h6 class="title">Choose Blockchain</h6>
                     <p class="sub">Connect With One Of Our Available Wallet Providers Or Create A New One.</p>
                     <ul class="blockchain-button">
-                        <li><a href="#"><img src="assets/images/svg/metamask.svg" alt="Image">MetaMask</a></li>
-                        <li><a href="#"><img src="assets/images/svg/coinbase.svg" alt="Image">Coinbase</a></li>
-                        <li><a href="#"><img src="assets/images/svg/torus.svg" alt="Image">Torus</a></li>
-                        <li><a href="#"><img src="assets/images/svg/fortmatic.svg" alt="Image">Fortmatic</a></li>
+                        <li><a href="#"><img src="/assets/images/svg/metamask.svg" alt="Image">MetaMask</a></li>
+                        <li><a href="#"><img src="/assets/images/svg/coinbase.svg" alt="Image">Coinbase</a></li>
+                        <li><a href="#"><img src="/assets/images/svg/torus.svg" alt="Image">Torus</a></li>
+                        <li><a href="#"><img src="/assets/images/svg/fortmatic.svg" alt="Image">Fortmatic</a></li>
                         <li><a href="#">Show more options</a></li>
                     </ul>
 
@@ -70,7 +70,7 @@ include_once (rootDir.'partials/front/header/main.php');
 
                                     <div class="drag-upload">
                                         <input type="file">
-                                        <img src="assets/images/svg/drap-upload.svg" alt="Image">
+                                        <img src="/assets/images/svg/drap-upload.svg" alt="Image">
                                         <h6 class="title">Drag your item to upload</h6>
                                         <p class="sub-title">PNG, GIF, WebP, MP4 Or MP3. Maximum File Size 100 Mb.</p>
                                     </div>
@@ -123,7 +123,7 @@ include_once (rootDir.'partials/front/header/main.php');
                                         </li>
                                         <li>
                                             <div class="create-item">
-                                                <div class="img"><img src="assets/images/collection/add-collection.jpg" alt="Image"></div>
+                                                <div class="img"><img src="/assets/images/collection/add-collection.jpg" alt="Image"></div>
                                                 <div class="content">
                                                     <h6>Battle for Digital</h6>
                                                     <p>56 items</p>
@@ -200,7 +200,7 @@ include_once (rootDir.'partials/front/header/main.php');
 
                                     <div class="drag-upload">
                                         <input type="file">
-                                        <img src="assets/images/svg/drap-upload.svg" alt="Image">
+                                        <img src="/assets/images/svg/drap-upload.svg" alt="Image">
                                         <h6 class="title">Drag your item to upload</h6>
                                         <p class="sub-title">PNG, GIF, WebP, MP4 Or MP3. Maximum File Size 100 Mb.</p>
                                     </div>
@@ -253,7 +253,7 @@ include_once (rootDir.'partials/front/header/main.php');
                                         </li>
                                         <li>
                                             <div class="create-item">
-                                                <div class="img"><img src="assets/images/collection/add-collection.jpg" alt="Image"></div>
+                                                <div class="img"><img src="/assets/images/collection/add-collection.jpg" alt="Image"></div>
                                                 <div class="content">
                                                     <h6>Battle for Digital</h6>
                                                     <p>56 items</p>
@@ -340,19 +340,19 @@ include_once (rootDir.'partials/front/header/main.php');
                     </div>
                     <div class="features">
                         <div class="product-media">
-                            <img src="assets/images/product/product4.jpg" alt="images">
+                            <img src="/assets/images/product/product4.jpg" alt="images">
                         </div>
                         <div class="featured-countdown">
                             <span class="js-countdown" data-timer="55555" data-labels=" ,  h , m , s "></span>
                         </div>
-                        <div class="rain-drop1"><img src="assets/images/icon/rain1.svg" alt="images"></div>
-                        <div class="rain-drop2"><img src="assets/images/icon/rain2.svg" alt="images"></div>
+                        <div class="rain-drop1"><img src="/assets/images/icon/rain1.svg" alt="images"></div>
+                        <div class="rain-drop2"><img src="/assets/images/icon/rain2.svg" alt="images"></div>
                     </div>
                     <div class="bottom">
                         <div class="details-product">
                             <div class="author">
                                 <div class="avatar">
-                                    <img src="assets/images/author/author1.png" alt="images">
+                                    <img src="/assets/images/author/author1.png" alt="images">
                                 </div>
                                 <div class="content">
                                     <div class="position">Creator</div>
@@ -362,7 +362,7 @@ include_once (rootDir.'partials/front/header/main.php');
                             <div class="current-bid">
                                 <div class="subtitle">Current bid</div>
                                 <div class="price">
-                                    <span class="cash">5 ETH</span><span class="icon"><img src="assets/images/icon/ethe.svg" alt="images"></span>
+                                    <span class="cash">5 ETH</span><span class="icon"><img src="/assets/images/icon/ethe.svg" alt="images"></span>
                                 </div>
                             </div>
                         </div>
