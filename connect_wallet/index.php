@@ -6,6 +6,7 @@ include_once (rootDir.'includes/core.php');
 include_once (rootDir.'partials/front/header/main.php');
 ?>
         <!-- title page -->
+<div class="py-5"></div>
         <section class="tf-page-title">
             <div class="tf-container">
                 <div class="row">
