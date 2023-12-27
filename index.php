@@ -1,4 +1,9 @@
-<?php include_once (rootDir.'partials/front/header/main.php'); ?>
+<?php
+    const pageName = 'Home';
+    include_once ('includes/generalConfig.php');
+    include_once ('includes/core.php');
+    include_once (rootDir.'partials/front/header/main.php');
+?>
         <section class="tf-slider">
             <div class="tf-container">
                 <div class="row">
