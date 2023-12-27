@@ -1,7 +1,10 @@
 <?php
 session_start();
-if (!isset($_SESSION['user_id'])) {
-    header("Location:" .siteUrl."auth/login");
+if (!isset($_SESSION['user_id'])) { ?>
+    <script>
+        window.location.href = '/auth/login';
+    </script>
+    <?php
     exit();
 }
 const pageName = 'Wallet Connect';
