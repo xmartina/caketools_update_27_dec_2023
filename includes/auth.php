@@ -1,6 +1,5 @@
 <?php
 include_once (rootDir.'includes/db_connect.php');
-const siteUrl = 'https://caketoolnftmarketplace.com/';
 if (isset($_POST['register'])) {
     // Collect user input
     $user_name = $_POST['user_name'];
@@ -57,7 +56,7 @@ elseif (isset($_POST['login'])) {
         if (password_verify($password, $row['password'])) {
             // Redirect to the dashboard
             $_SESSION['user_id'] = $row['id'];
-            header("Location:".siteUrl. "auth/login?login-success");
+            header("Location: /auth/login?login-success");
 //            sleep(3);
 //            $_SESSION['user_id'] = $row['id'];
 //            header("Location:". siteUrl. "users/dashboard");
