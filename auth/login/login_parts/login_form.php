@@ -1,5 +1,5 @@
 <form action="" method="post">
-    <div class="title-login">Or login with account</div>
+    <div class="title-login">login with account details</div>
         <?php
         if (isset($_GET['wrong-pass'])) {
             echo '<div class="error-msg text-danger pb-3 mb-2 text-center">
