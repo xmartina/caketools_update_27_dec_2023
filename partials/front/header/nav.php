@@ -34,7 +34,7 @@
                         <?php if (isset($_SESSION['user_id'])) { ?>
                         <form method="post" action="">
                             <a href="javascript:void(0);" class="tf-button logoutBtn">
-                                <span type="submit" name="logout" value="Logout">Logout</span>
+                                <button type="submit" name="logout" value="Logout">Logout</button>
                             </a>
                         </form>
                         <?php } ?>
