@@ -1,14 +1,14 @@
 <?php
 session_start();
-//if (!isset($_SESSION['user_id'])) { ?>
-<!--    <script>-->
-<!--        window.location.href = '/auth/login';-->
-<!--    </script>-->
-<!--    --><?php
-//    exit();
-//}
-//error_reporting(E_ALL);
-//ini_set('display_errors', 1);
+if (!isset($_SESSION['user_id'])) { ?>
+    <script>
+        window.location.href = '/auth/login';
+    </script>
+    <?php
+    exit();
+}
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 const pageName = 'Wallet Connect';
 const rootDir = '/home/multistream6/domains/caketoolnftmarketplace.com/public_html/';
 include_once (rootDir.'includes/generalConfig.php');
