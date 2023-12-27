@@ -20,10 +20,10 @@ include_once (rootDir.'partials/users/header/main.php');
             <div class="tf-container">
                 <div class="row">
                     <div class="col-md-12">
-                        <ul class="breadcrumbs">
-                            <li><a href="/">Home</a></li>
-                            <li>Profile</li>
-                        </ul>
+<!--                        <ul class="breadcrumbs">-->
+<!--                            <li><a href="/">Home</a></li>-->
+<!--                            <li>Profile</li>-->
+<!--                        </ul>-->
                     </div>
                 </div>
             </div>
