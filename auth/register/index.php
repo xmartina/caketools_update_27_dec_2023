@@ -10,14 +10,15 @@ include_once (rootDir.'partials/auth/header.php');
 
 
 ?>
+<div class="py-5"></div>
 <section class="tf-page-title style-2">
     <div class="tf-container">
         <div class="row">
             <div class="col-md-12">
-                <ul class="breadcrumbs">
-                    <li><a href="blog2.html">Home</a></li>
-                    <li>Sign Up</li>
-                </ul>
+<!--                <ul class="breadcrumbs">-->
+<!--                    <li><a href="blog2.html">Home</a></li>-->
+<!--                    <li>Sign Up</li>-->
+<!--                </ul>-->
 
             </div>
         </div>
