@@ -33,9 +33,5 @@
         </label>
         <a class="forgot-pass" href="<?=siteUrl ?>auth/forgotten_pass">Forgot password?</a>
     </div>
-    <div class="title-login">Or login with social</div>
-    <div class="button-gg"><a href="#" ><i class="fab fa-facebook"></i>Facebook</a></div>
-    <div class="button-gg mb31"><a href="#" ><i class="fab fa-google"></i>Google</a>
-    </div>
     <button class="submit" type="submit" name="login">Login</button>
 </form>
