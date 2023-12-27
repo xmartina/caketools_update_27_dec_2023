@@ -33,9 +33,9 @@
                     <span class="header-right">
                         <?php if (isset($_SESSION['user_id'])) { ?>
                         <form method="post" action="">
-                            <span class="tf-button logoutBtn">
-                                <button type="submit" name="logout" value="Logout">Logout</button>
-                            </span>
+                            <a href="javascript:void(0);" class="tf-button logoutBtn">
+                                <span type="submit" name="logout" value="Logout">Logout</span>
+                            </a>
                         </form>
                         <?php } ?>
                         <a href="<?php if ($_SERVER['REQUEST_URI'] == '/connect_wallet/'){ ?>javascript:void(0);<?php } else { ?><?=siteUrl ?>connect_wallet <?php } ?>" class="tf-button "><span>Connect Wallet</span></a>
