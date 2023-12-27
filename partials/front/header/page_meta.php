@@ -24,5 +24,6 @@
     <!-- Favicon and Touch Icons  -->
     <link rel="shortcut icon" href="/assets/icon/Favicon.png">
     <link rel="apple-touch-icon-precomposed" href="/assets/icon/Favicon.png">
+    <link rel="stylesheet" href="<?=siteUrl?>assets/css/front_header_css.css">
 
 </head>
