@@ -14,7 +14,7 @@
                     <div class="header-center">
                         <nav id="main-nav" class="main-nav">
                             <ul id="menu-primary-menu" class="menu">
-                                <li class="menu-item <?php if (isset($_GET['/'])){echo 'current-menu-item';} ?>">
+                                <li class="menu-item <?php if ($_SERVER['REQUEST_URI'] == '/'){echo 'current-menu-item';} ?>">
                                     <a href="/">Home</a>
                                 </li>
                                 <li class="menu-item">
