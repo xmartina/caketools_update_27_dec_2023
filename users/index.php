@@ -91,7 +91,7 @@ include_once (rootDir.'partials/users/header/main.php');
                         <div class="dashboard-content inventory content-tab">
                             <div class="inner-content inventory">
                                 <h4 class="title-dashboard">Inventory</h4>
-                                <?php include_once ('users/inventory/main.php'); ?>
+                                <?php include_once (rootDir.'users/inventory/main.php'); ?>
                             </div>
                             <div class="inner-content wallet">
                                 <h4 class="title-dashboard">Connect Wallet</h4>
