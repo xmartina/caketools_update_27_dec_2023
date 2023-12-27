@@ -31,6 +31,9 @@
             <input type="checkbox">
             <span class="btn-checkbox"></span>
         </label>
+        <div class="regLink">
+            <a class="forgot-pass" href="<?=siteUrl ?>auth/register">Create an account</a>
+        </div>
         <a class="forgot-pass" href="<?=siteUrl ?>auth/forgotten_pass">Forgot password?</a>
     </div>
     <button class="submit" type="submit" name="login">Login</button>
