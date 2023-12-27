@@ -3,15 +3,6 @@
     const pageName = 'Login';
     const rootDir = '/home/multistream6/domains/caketoolnftmarketplace.com/public_html/';
     include_once (rootDir.'includes/generalConfig.php');
-    if ($_SERVER['REQUEST_URI'] =='/wrong-pass/' || $_SERVER['REQUEST_URI'] =='/no-user/' ||  $_SERVER['REQUEST_URI'] =='/login-success/' ) {
-       null;
-    }
-//    else{
-////        if (isset($_SESSION['user_id'])) {
-////            header("Location: " . siteUrl . "users");
-////            exit();
-////        }
-//    }
     include_once (rootDir.'includes/auth.php');
     include_once (rootDir.'partials/auth/header.php');
 
