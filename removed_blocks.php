@@ -24,3 +24,11 @@
 <div class="button-gg mb31"><a href="#" ><i class="fab fa-google"></i>Google</a>
 </div>
 <!--Login Page End-->
+<fieldset class="mb24"> <input id="showpassword2" name="password" tabindex="2" aria-required="true"  type="password" placeholder="Confirm password" required="">
+    <span class="btn-show-pass2"><i class="far fa-eye-slash"></i></span></fieldset>
+
+<div class="title-login">Or login with social</div>
+<div class="button-gg"><a href="#" ><i class="fab fa-facebook"></i>Facebook</a></div>
+<div class="button-gg mb33"><a href="#" ><i class="fab fa-google"></i>Google</a>
+</div>
+<!--Registration Page End-->
