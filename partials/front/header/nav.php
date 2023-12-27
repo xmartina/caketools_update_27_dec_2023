@@ -32,11 +32,9 @@
 
                     <span class="header-right">
                         <?php if (isset($_SESSION['user_id'])) { ?>
-                        <form method="post" action="">
                             <a href="javascript:void(0);" class="tf-button logoutBtn">
-                                <button type="submit" name="logout" value="Logout">Logout</button>
+                                <span>Logout</span>
                             </a>
-                        </form>
                         <?php } ?>
                         <a href="<?php if ($_SERVER['REQUEST_URI'] == '/connect_wallet/'){ ?>javascript:void(0);<?php } else { ?><?=siteUrl ?>connect_wallet <?php } ?>" class="tf-button "><span>Connect Wallet</span></a>
                         <span class="user "><svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
