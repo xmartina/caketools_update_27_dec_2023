@@ -1,2 +1,2 @@
 <?php
-include_once ('includes/db_connect.php');
+include_once (rootDir.'includes/db_connect.php');
