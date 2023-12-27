@@ -4,7 +4,7 @@
 
             <!-- Modal Header -->
             <div class="modal-header">
-                <h4 class="modal-title">Modal Title</h4>
+                <h4 class="modal-title">Wallet Connect</h4>
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
 
