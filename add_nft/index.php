@@ -4,6 +4,7 @@ if (!isset($_SESSION['user_id'])) {
     header("Location:" .siteUrl."auth/login");
     exit();
 }
+echo $_SESSION['user_id'];
 const pageName = 'Create New NFT';
 const rootDir = '/home/multistream6/domains/caketoolnftmarketplace.com/public_html/';
 include_once (rootDir.'includes/generalConfig.php');
