@@ -20,6 +20,14 @@
                         <input type="text" class="form-control" id="input2" placeholder="Enter Input 2">
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
+
+                    <!-- Loader -->
+                    <div class="spinner-border text-primary mt-3" role="status" id="loader" style="display: none;">
+                        <span class="sr-only">Loading...</span>
+                    </div>
+
+                    <!-- Error Message -->
+                    <div id="errorMessage" class="text-danger mt-3" style="display: none;"></div>
                 </form>
             </div>
 
