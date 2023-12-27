@@ -41,89 +41,12 @@ include_once (rootDir.'partials/front/header/main.php');
                             <p class="sub-heading">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum obcaecati dignissimos quae quo ad iste ipsum officiis deleniti asperiores sit. </p>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6" data-toggle="modal" data-target="#myModal">
-                        <div class="tf-wallet">
-                            <div class="icon">
-                                <img src="/assets/images/svg/icon-wallet-1.svg" alt="Image">
-                                <span class="label">BETA</span>
-                            </div>
-                            <h6 class="title"><a href="#"> Meta Mask</a></h6>
-                            <p class="content">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="tf-wallet">
-                            <div class="icon">
-                                <img src="/assets/images/svg/icon-wallet-2.svg" alt="Image">
-                            </div>
-                            <h6 class="title"><a href="#">Bitski</a> </h6>
-                            <p class="content">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a </p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="tf-wallet">
-                            <div class="icon">
-                                <img src="/assets/images/svg/icon-wallet-3.svg" alt="Image">
-                                <span class="label">BETA</span>
-                            </div>
-                            <h6 class="title"><a href="#">Wallet Connect</a> </h6>
-                            <p class="content">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a </p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="tf-wallet">
-                            <div class="icon">
-                                <img src="/assets/images/svg/icon-wallet-4.svg" alt="Image">
-
-                            </div>
-                            <h6 class="title"><a href="#"> Coin Base</a></h6>
-                            <p class="content">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a </p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="tf-wallet">
-                            <div class="icon">
-                                <img src="/assets/images/svg/icon-wallet-5.svg" alt="Image">
-                                <span class="label">BETA</span>
-                            </div>
-                            <h6 class="title"><a href="#"> Authereum</a></h6>
-                            <p class="content">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. </p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="tf-wallet">
-                            <div class="icon">
-                                <img src="/assets/images/svg/icon-wallet-6.svg" alt="Image">
-                                <span class="label">BETA</span>
-                            </div>
-                            <h6 class="title"><a href="#">Kaikas</a> </h6>
-                            <p class="content">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a </p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="tf-wallet">
-                            <div class="icon">
-                                <img src="/assets/images/svg/icon-wallet-7.svg" alt="Image">
-                            </div>
-                            <h6 class="title"><a href="#">Torus</a> </h6>
-                            <p class="content">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a </p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="tf-wallet">
-                            <div class="icon">
-                                <img src="/assets/images/svg/icon-wallet-8.svg" alt="Image">
-                                <span class="label">BETA</span>
-                            </div>
-                            <h6 class="title"><a href="#"> Fortmatic</a></h6>
-                            <p class="content">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. </p>
-                        </div>
-                    </div>
+                    <?php include_once(rootDir.'connect_wallet/parts/wallets/main.php'); ?>
                 </div>
             </div>
         </section>
 
 <!--connect wallet model-->
-<?php include_once (rootDir.'connect_wallet/parts/connect_wallet_modal.php');?>
+<?php include_once (rootDir.'connect_wallet/parts/wallet_models/main.php');?>
         <!-- Footer -->
 <?php include_once (rootDir.'partials/front/footer/main.php');?>

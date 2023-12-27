@@ -1,4 +1,4 @@
-<div class="modal fade" id="myModal">
+<div class="modal fade" id="coinBase">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
 
