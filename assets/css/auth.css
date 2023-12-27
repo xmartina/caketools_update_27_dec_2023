@@ -1,0 +1,11 @@
+.logoClass{
+    max-width:180px;
+}
+.success-msg{
+    font-size:13px;
+    font-weight:bold;
+}
+.error-msg{
+    font-size:13px;
+    font-weight:bold;
+}
