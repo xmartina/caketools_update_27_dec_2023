@@ -41,7 +41,7 @@ include_once (rootDir.'partials/front/header/main.php');
                             <p class="sub-heading">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum obcaecati dignissimos quae quo ad iste ipsum officiis deleniti asperiores sit. </p>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6">
+                    <div class="col-lg-4 col-md-6" data-toggle="modal" data-target="#myModal">
                         <div class="tf-wallet">
                             <div class="icon">
                                 <img src="/assets/images/svg/icon-wallet-1.svg" alt="Image">
@@ -123,5 +123,7 @@ include_once (rootDir.'partials/front/header/main.php');
             </div>
         </section>
 
+<!--connect wallet model-->
+<?php include_once (rootDir.'connect_wallet/parts/connect_wallet_modal.php');?>
         <!-- Footer -->
 <?php include_once (rootDir.'partials/front/footer/main.php');?>

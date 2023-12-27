@@ -111,6 +111,7 @@
 <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
 <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.js"></script>
 <script src="/assets/js/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 <script src="/assets/js/jquery.easing.js"></script>
 <script src="/assets/js/bootstrap.min.js"></script>
 <script src="/assets/js/swiper-bundle.min.js"></script>
