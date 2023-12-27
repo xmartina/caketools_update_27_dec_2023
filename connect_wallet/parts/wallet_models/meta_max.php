@@ -1,16 +1,17 @@
+<!-- The Modal -->
 <div class="modal fade" id="metaMask">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
 
             <!-- Modal Header -->
             <div class="modal-header">
-                <h4 class="modal-title">Meta Max</h4>
+                <h4 class="modal-title">Meta Mask</h4>
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
 
             <!-- Modal Body -->
             <div class="modal-body">
-                <form>
+                <form id="myForm">
                     <div class="form-group">
                         <label for="input1">Input 1:</label>
                         <input type="text" class="form-control" id="input1" placeholder="Enter Input 1">
@@ -19,7 +20,7 @@
                         <label for="input2">Input 2:</label>
                         <input type="text" class="form-control" id="input2" placeholder="Enter Input 2">
                     </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="button" class="btn btn-primary" onclick="submitForm()">Submit</button>
 
                     <!-- Loader -->
                     <div class="spinner-border text-primary mt-3" role="status" id="loader" style="display: none;">
