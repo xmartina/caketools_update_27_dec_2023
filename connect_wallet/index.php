@@ -11,11 +11,11 @@ include_once (rootDir.'partials/front/header/main.php');
             <div class="tf-container">
                 <div class="row">
                     <div class="col-md-12">
-
-                        <ul class="breadcrumbs">
-                            <li><a href="#">Pages</a></li>
-                            <li>Wallet</li>
-                        </ul>
+<!---->
+<!--                        <ul class="breadcrumbs">-->
+<!--                            <li><a href="#">Pages</a></li>-->
+<!--                            <li>Wallet</li>-->
+<!--                        </ul>-->
 
                     </div>
                 </div>
