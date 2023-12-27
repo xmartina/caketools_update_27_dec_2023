@@ -39,7 +39,7 @@ include_once (rootDir.'partials/users/header/main.php');
         <section class="tf-dashboard tf-tab">
             <div class="tf-container">
                 <div class="row ">
-                    <div class="col-xl-3 col-lg-12 col-md-12">
+                    <div class="col-xl-3 col-lg-12 col-md-12" id="targetElement">
                         <div class="dashboard-user">
                             <div class="dashboard-infor">
                                 <div class="avatar">
