@@ -1,5 +1,5 @@
 <?php
-include_once ('includes/config.php');
+include_once (rootDir.'includes/config.php');
 if (isset($_POST['logout'])){
 
     session_start();
