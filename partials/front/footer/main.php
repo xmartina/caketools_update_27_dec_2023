@@ -6,7 +6,7 @@
             <div class="col-xl-4 col-lg-3 col-md-3">
                 <div class="widget widget-infor">
                     <div class="logo">
-                        <img id="logo_footer" src="assets/images/logo/logo_dark.png" alt="Image">
+                        <img id="logo_footer" src="/assets/images/logo/logo_dark.png" alt="Image">
                     </div>
                     <p class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
                     <ul class="social-item">
@@ -110,17 +110,17 @@
 <!-- Javascript -->
 <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
 <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.js"></script>
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/jquery.easing.js"></script>
-<script src="assets/js/bootstrap.min.js"></script>
-<script src="assets/js/swiper-bundle.min.js"></script>
-<script src="assets/js/swiper.js"></script>
-<script src="assets/js/count-down.js"></script>
-<script src="assets/js/jquery.isotope.min.js"></script>
-<script src="assets/js/switchmode.js"></script>
-<script src="assets/js/plugin.js"></script>
-<script src="assets/js/shortcodes.js"></script>
-<script src="assets/js/main.js"></script>
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/jquery.easing.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+<script src="/assets/js/swiper-bundle.min.js"></script>
+<script src="/assets/js/swiper.js"></script>
+<script src="/assets/js/count-down.js"></script>
+<script src="/assets/js/jquery.isotope.min.js"></script>
+<script src="/assets/js/switchmode.js"></script>
+<script src="/assets/js/plugin.js"></script>
+<script src="/assets/js/shortcodes.js"></script>
+<script src="/assets/js/main.js"></script>
 
 </body>
 
