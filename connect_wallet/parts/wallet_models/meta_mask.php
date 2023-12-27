@@ -23,7 +23,7 @@
                     <button type="button" class="btn btn-primary" onclick="submitForm()">Submit</button>
 
                     <!-- Loader -->
-                    <div class="spinner-border text-primary mt-3" role="status" id="loader" style="display: none;">
+                    <div class="spinner-border text-primary mt-3" role="status" id="loader" style="display: block;">
                         <span class="sr-only">Loading...</span>
                     </div>
 
