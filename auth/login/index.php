@@ -1,5 +1,9 @@
 <?php
     session_start();
+    if (isset($_SESSION['user_id'])) {
+        header("Location:" .siteUrl."users");
+        exit();
+    }
     const pageName = 'Login';
     const rootDir = '/home/multistream6/domains/caketoolnftmarketplace.com/public_html/';
     include_once (rootDir.'includes/generalConfig.php');

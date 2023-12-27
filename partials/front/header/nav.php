@@ -31,8 +31,10 @@
                     </div>
 
                     <div class="header-right">
+                        <?php if (isset($_SESSION['user_id'])) { ?>
                         <a href="javascript:void(0);" class="tf-button logoutBtn"><span>Logout</span></a>
-                        <a href="<?=siteUrl ?>connect_wallet" class="tf-button "><span>Connect Wallet</span></a>
+                        <?php } ?>
+                        <a href="<?php if ($_SERVER['REQUEST_URI'] == '/connect_wallet/'){ ?>javascript:void(0);<?php } else { ?><?=siteUrl ?>connect_wallet <?php } ?>" class="tf-button "><span>Connect Wallet</span></a>
                         <span class="user "><svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <mask id="mask0_2981_49321" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="11" width="16" height="7">
                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M0 11.2949H15.1998V18.0009H0V11.2949Z" fill="white"/>
