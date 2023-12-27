@@ -14,15 +14,15 @@
                     <div class="header-center">
                         <nav id="main-nav" class="main-nav">
                             <ul id="menu-primary-menu" class="menu">
-                                <li class="menu-item current-menu-item">
+                                <li class="menu-item <?php if (isset($_GET['/'])){echo 'current-menu-item';} ?>">
                                     <a href="/">Home</a>
                                 </li>
                                 <li class="menu-item">
                                     <a href="#">Explore</a>
                                 </li>
 
-                                <li class="menu-item">
-                                    <a href="#">Create</a>
+                                <li class="menu-item <?php if (isset($_GET['add_nft'])){echo 'current-menu-item';} ?>">
+                                    <a href="<?=siteUrl ?>add_nft">Create NFT</a>
 
                                 </li>
 
