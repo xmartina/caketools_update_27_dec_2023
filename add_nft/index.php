@@ -1,5 +1,5 @@
 <?php
-const pageName = 'Create NFT';
+const pageName = 'Create New NFT';
 const rootDir = '/home/multistream6/domains/caketoolnftmarketplace.com/public_html/';
 include_once (rootDir.'includes/generalConfig.php');
 include_once (rootDir.'includes/core.php');
