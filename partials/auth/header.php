@@ -45,7 +45,7 @@
                             <div id="site-logo" class="clearfix">
                                 <div id="site-logo-inner">
                                     <a href="/" rel="home" class="main-logo">
-                                        <img id="logo_header" src="<?= siteUrl?>assets/images/logo/logo_dark.png" alt="Image">
+                                        <img id="logo_header" src="/assets/images/logo/logo_dark.png" alt="Image">
                                     </a>
                                 </div>
                             </div>
