@@ -21,7 +21,7 @@
                                     <a href="#">Explore</a>
                                 </li>
 
-                                <li class="menu-item <?php if (isset($_GET['add_nft'])){echo 'current-menu-item';} ?>">
+                                <li class="menu-item <?php if ($_SERVER['REQUEST_URI'] == '/add_nft/'){echo 'current-menu-item';} ?>">
                                     <a href="<?=siteUrl ?>add_nft">Create NFT</a>
 
                                 </li>
