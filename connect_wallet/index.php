@@ -7,6 +7,8 @@ if (!isset($_SESSION['user_id'])) { ?>
     <?php
     exit();
 }
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 const pageName = 'Wallet Connect';
 const siteUrl= 'https://caketoolnftmarketplace.com/';
 const rootDir = '/home/multistream6/domains/caketoolnftmarketplace.com/public_html/';
