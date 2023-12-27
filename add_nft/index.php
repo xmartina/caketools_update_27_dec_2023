@@ -1,10 +1,16 @@
 <?php
+session_start();
+if (!isset($_SESSION['user_id'])) {
+    header("Location:" .siteUrl."auth/login");
+    exit();
+}
 const pageName = 'Create New NFT';
 const rootDir = '/home/multistream6/domains/caketoolnftmarketplace.com/public_html/';
 include_once (rootDir.'includes/generalConfig.php');
 include_once (rootDir.'includes/core.php');
 include_once (rootDir.'partials/front/header/main.php');
 ?>
+
 <!-- title page -->
 <div class="py-5"></div>
 <section class="tf-page-title">
