@@ -23,7 +23,7 @@
                 window.onload = redirectToDashboard;
             </script>
         <?php }
-            else{
+            elseif($_SERVER['request_uri'] == '/auth/login/'){
                 if (isset($_SESSION['user_id'])) {
                     header("Location: " . siteUrl . "users");
                     exit();
