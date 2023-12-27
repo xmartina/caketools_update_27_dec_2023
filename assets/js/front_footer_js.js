@@ -4,6 +4,7 @@ $("#logoutBtn").click(function() {
 });
 
 // Wallet Connect form validation
+// Define the submitForm function before it is referenced
 function submitForm() {
     // Display loader
     document.getElementById("loader").style.display = "block";
