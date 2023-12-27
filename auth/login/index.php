@@ -3,7 +3,7 @@
     const pageName = 'Login';
     const rootDir = '/home/multistream6/domains/caketoolnftmarketplace.com/public_html/';
     include_once (rootDir.'includes/generalConfig.php');
-    include_once ('includes/core.php');
+    include_once (rootDir.'includes/auth.php');
     include_once (rootDir.'partials/auth/header.php');
 ?>
             <section class="tf-page-title style-2">    
