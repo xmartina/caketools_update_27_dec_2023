@@ -5,8 +5,8 @@
                 <div id="site-header-inner">
                     <div id="site-logo" class="clearfix">
                         <div id="site-logo-inner">
-                            <a href="index.html" rel="home" class="main-logo">
-                                <img id="logo_header" src="assets/images/logo/logo_dark.png" alt="Image">
+                            <a href="/" rel="home" class="main-logo">
+                                <img id="logo_header" src="/assets/images/logo/logo_dark.png" alt="Image">
                             </a>
                         </div>
                     </div>
@@ -108,7 +108,7 @@
                                         </svg>
                                         </span>
                         <a href="#" onclick="switchTheme()" class="mode-switch">
-                            <img id="img-mode" src="assets/images/icon/moon.png" alt="Image">
+                            <img id="img-mode" src="/assets/images/icon/moon.png" alt="Image">
                         </a>
                     </div>
 
