@@ -49,6 +49,9 @@
             <input type="checkbox">
             <span class="btn-checkbox"></span>
         </label>
+        <div class="regLink">
+            Already have an account?<a class="forgot-pass" href="<?=siteUrl ?>auth/register">login here</a>
+        </div>
     </div>
     <button class="submit" type="submit" name="register">Signup</button>
 </form>
