@@ -6,7 +6,7 @@
             </div>
             <div class="name">Francisco Maia</div>
             <div class="pax mb-2"><i class="fas fa-dollar-sign"></i>My Balance</div>
-            <div class="pax mb-2"><i class="fab fa-bitcoin"></i>0.053</div>
+            <div class="pax mb-2"><i class="fab fa-bitcoin"></i><?=$btc_bal?></div>
             <div class="pax mb-3"><i class="fab fa-ethereum"></i>0.4399</div>
             <div class="pax mb-2"><i class="">₮</i>0.4399</div>
             <div class="description">

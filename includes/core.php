@@ -15,3 +15,9 @@ if (isset($_POST['logout'])){
     exit();
 
 }
+
+//Get Users data from users table
+$sql = "SELECT btc_bal, eth_bal, usdt_bal FROM users WHERE id = $user_id";
+$result = $conn->query($sql);
+$row = $result->fetch_assoc();
+$btc_bal = $row['btc_bal'];
