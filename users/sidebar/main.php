@@ -2,13 +2,13 @@
     <div class="dashboard-user">
         <div class="dashboard-infor">
             <div class="avatar">
-                <img src="/assets/images/author/author-db.jpg" alt="images">
+                <img src="/assets/images/author/<?=$userImg?>" alt="images">
             </div>
-            <div class="name">Francisco Maia</div>
+            <div class="name"><?=$fullName?></div>
             <div class="pax mb-2"><i class="fas fa-dollar-sign"></i>My Balance</div>
             <div class="pax mb-2"><i class="fab fa-bitcoin"></i><?=$btc_bal?></div>
-            <div class="pax mb-3"><i class="fab fa-ethereum"></i>0.4399</div>
-            <div class="pax mb-2"><i class="">₮</i>0.4399</div>
+            <div class="pax mb-3"><i class="fab fa-ethereum"></i><?=$eth_bal?></div>
+            <div class="pax mb-2"><i class="">₮</i><?=$usdt_bal?></div>
             <div class="description">
                 Explore your account: Instantly view balances and recent activity for a clear and concise financial snapshot.
             </div>
