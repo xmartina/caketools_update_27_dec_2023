@@ -5,6 +5,7 @@
                 <img src="/assets/images/author/author-db.jpg" alt="images">
             </div>
             <div class="name">Francisco Maia</div>
+            <div class="pax"><i class="fab fa-dollar-sign"></i>My Balance</div>
             <div class="pax"><i class="fab fa-ethereum"></i>0x59485…82590</div>
             <div class="description">
                 8,888 NFTs of beautiful, Asian women painstakingly-crafted where even the most intricate
