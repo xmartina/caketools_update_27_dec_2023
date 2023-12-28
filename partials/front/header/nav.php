@@ -25,6 +25,11 @@
                                     <a href="<?=siteUrl ?>add_nft">Create NFT</a>
 
                                 </li>
+                                <?php if (isset($_SESSION['user_id'])) { ?>
+                                <li class="menu-item <?php if ($_SERVER['REQUEST_URI'] == '/users/'){echo 'current-menu-item';} ?>">
+                                    <a href="<?=siteUrl ?>users">My Dashboard</a>
+                                </li>
+                                <?php } ?>
 
                             </ul>
                         </nav><!-- /#main-nav -->
