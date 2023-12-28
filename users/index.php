@@ -7,7 +7,6 @@ if (!isset($_SESSION['user_id'])) { ?>
     <?php
     exit();
 }
-$user_id = $_SESSION['user_id'];
 const pageName = 'My Inventory';
 const rootDir = '/home/multistream6/domains/caketoolnftmarketplace.com/public_html/';
 include_once (rootDir.'includes/generalConfig.php');
