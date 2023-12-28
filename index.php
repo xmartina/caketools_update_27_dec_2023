@@ -1,4 +1,5 @@
 <?php
+    session_start();
     const pageName = 'Home';
     const rootDir = '/home/multistream6/domains/caketoolnftmarketplace.com/public_html/';
     include_once ('includes/generalConfig.php');
