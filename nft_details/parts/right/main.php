@@ -16,8 +16,8 @@
             <?php } ?>
         </div>
     </div>
-    <h2 class="title-detail">Wicked Cranium #4449</h2>
-    <p class="except">A Collection Of 10,000 Undead NFTs Minted On The Ethereum Blockchain. Each Unique Deadfella Is Randomly Generated From A Combination.</p>
+    <h2 class="title-detail"><?= $nft_name ?></h2>
+    <p class="except"><?= $nft_description ?></p>
     <div class="tf-tab">
         <ul class="menu-tab ">
             <li class="tab-title active">

@@ -8,7 +8,7 @@
                 <!--                            <li><a href="explore.html">Explore</a></li>-->
                 <!--                            <li>Item Details</li>-->
                 <!--                        </ul>-->
-                <h4 class="page-title-heading">Item Details</h4>
+                <h4 class="page-title-heading">NFT Details</h4>
             </div>
         </div>
     </div>
