@@ -29,9 +29,9 @@
 
         </ul>
         <div class="content-tab">
-            <?php include_once ('nft_details/parts/right/parts/details_tab.php') ?>
-            <?php include_once ('nft_details/parts/right/parts/bids_tab.php') ?>
-            <?php include_once ('nft_details/parts/right/parts/history_tab.php') ?>
+            <?php include_once (rootDir.'nft_details/parts/right/parts/details_tab.php') ?>
+            <?php include_once (rootDir.'nft_details/parts/right/parts/bids_tab.php') ?>
+            <?php include_once (rootDir.'nft_details/parts/right/parts/history_tab.php') ?>
         </div>
     </div>
     <div class="content-bottom">
