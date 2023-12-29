@@ -3,6 +3,8 @@ include_once (rootDir.'includes/url_checks/main.php');
 
 if ($directory == edit_nft_admin) {
     $nft_ref_id = $_GET['ref_id'];
+} else {
+    $nft_ref_id =
 }
 $user_id = $_SESSION['user_id'];
 $nft_current_owner_id = $_SESSION['user_id'];
