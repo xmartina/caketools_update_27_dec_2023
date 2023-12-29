@@ -1,6 +1,6 @@
 <?php
 // Update NFT parent
-if ($directory == '/admin/edit_nft/ref_id/') {
+if ($directory == edit_nft_admin) {
     $updateSql = "UPDATE nft_parent SET
         name = ?,
         description = ?,

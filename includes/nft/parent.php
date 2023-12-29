@@ -6,7 +6,6 @@ if ($directory == edit_nft_admin) {
 }
 $user_id = $_SESSION['user_id'];
 $nft_current_owner_id = $_SESSION['user_id'];
-$owner_id = $_GET['owner_id'];
 
 include_once (rootDir.'includes/nft/create/main.php');
 include_once (rootDir.'includes/nft/get/main.php');
