@@ -5,6 +5,9 @@ if ($directory == edit_nft_admin) {
     return $nft_ref_id;
 } elseif ($directory == edit_nft){
     $nft_ref_id = $_GET['ref_id'];
+} elseif ($directory == nft_details){
+    $nft_ref_id = $_GET['ref_id'];
+    return $nft_ref_id;
 }
 $user_id = $_SESSION['user_id'];
 $nft_current_owner_id = $_SESSION['user_id'];
