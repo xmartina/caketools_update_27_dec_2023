@@ -1,7 +1,7 @@
 <?php
 include_once (rootDir.'includes/url_checks/main.php');
 
-if ($directory == '/admin/edit_nft/ref_id/') {
+if ($directory == edit_nft_admin) {
     $nft_ref_id = $_GET['ref_id'];
 }
 $user_id = $_SESSION['user_id'];

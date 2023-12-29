@@ -1,5 +1,6 @@
 <?php
 include_once (rootDir.'includes/config.php');
+include_once (rootDir.'routes/main.php');
 if (isset($_POST['logout'])){
 
     session_start();
