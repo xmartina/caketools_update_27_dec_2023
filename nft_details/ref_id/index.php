@@ -1,5 +1,4 @@
 <?php
-include_once (rootDir.'nft_details/index.php');
 //echo $directory == nft_details;
 //echo nft_details;
 // Get the current request URI
@@ -24,3 +23,4 @@ if (isset($urlComponents['query'])) {
     echo "No query string found in the request URI.";
 }
 $nft_ref_id = $refIdValue;
+include_once (rootDir.'nft_details/index.php');
