@@ -29,9 +29,9 @@ if ($directory == edit_nft_admin) {
     return $updateStmt;
 
 }
-
-$updateStmt = $conn->prepare($updateSql);
-$updateStmt->bind_param("ssssiii", $new_nft_name, $new_nft_description, $new_nft_price, $new_nft_category, $new_nft_likes, $nft_current_owner_id, $nft_ref_id);
+//
+//$updateStmt = $conn->prepare($updateSql);
+//$updateStmt->bind_param("ssssiii", $new_nft_name, $new_nft_description, $new_nft_price, $new_nft_category, $new_nft_likes, $nft_current_owner_id, $nft_ref_id);
 
 $updateStmt->execute();
 
