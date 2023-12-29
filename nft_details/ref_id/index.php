@@ -23,3 +23,4 @@ if (isset($urlComponents['query'])) {
 } else {
     echo "No query string found in the request URI.";
 }
+$nft_ref_id = $refIdValue;
