@@ -10,11 +10,12 @@ include_once (rootDir.'includes/url_checks/main.php');
 //    $nft_ref_id = $_GET['ref_id'];
 //    return $nft_ref_id;
 //}
-if ($keyIndex !== false && isset($parts[$keyIndex + 1])) {
-    $refIdValue = $parts[$keyIndex + 1];
-    $nft_ref_id = $_GET['ref_id'];
-    return $nft_ref_id;
-}
+//if ($keyIndex !== false && isset($parts[$keyIndex + 1])) {
+//    $refIdValue = $parts[$keyIndex + 1];
+//    $nft_ref_id = $_GET['ref_id'];
+//    return $nft_ref_id;
+//}
+$nft_ref_id = $_GET['ref_id'];
 $user_id = $_SESSION['user_id'];
 $nft_current_owner_id = $_SESSION['user_id'];
 
