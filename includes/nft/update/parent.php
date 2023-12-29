@@ -1,23 +1,24 @@
 <?php
 // Update NFT parent
+
+$new_nft_name = $_POST['name'];
+$new_nft_description = $_POST['description'];
+$new_nft_price = $_POST['price'];
+$new_nft_category = $_POST['category'];
+$new_nft_likes = $_POST['likes'];
+
 $updateSql = "UPDATE nft_parent SET
-name = ?,
-description = ?,
-price = ?,
-category = ?,
-likes = ?
-WHERE ref_id = ?";
+    name = '$new_nft_name',
+    description = '$new_nft_description',
+    price = '$new_nft_price',
+    category = '$new_nft_category',
+    likes = '$new_nft_likes'
+    WHERE ref_id = '$nft_ref_id'";
 
-$updateStmt = $conn->prepare($updateSql);
+$result = $conn->query($updateSql);
 
-$updateStmt->bind_param("ssssis", $new_nft_name, $new_nft_description, $new_nft_price, $new_nft_category, $new_nft_likes, $nft_ref_id);
-
-$updateStmt->execute();
-
-if ($updateStmt->affected_rows > 0) {
-echo "NFT Parent records updated successfully<br>";
+if ($result === true) {
+    echo "NFT Parent records updated successfully<br>";
 } else {
-echo "Error updating NFT Parent records<br>";
+    echo "Error updating NFT Parent records: " . $conn->error . "<br>";
 }
-
-$updateStmt->close();

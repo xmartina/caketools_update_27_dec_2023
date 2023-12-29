@@ -1,6 +1,6 @@
 <?php
 include_once (rootDir.'includes/url_checks/main.php');
-
+$nft_ref_id = $_GET['ref_id'];
 if ($directory == edit_nft_admin) {
     $nft_ref_id = $_GET['ref_id'];
     return $nft_ref_id;
