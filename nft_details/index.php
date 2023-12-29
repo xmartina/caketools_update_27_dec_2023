@@ -7,11 +7,13 @@ if (!isset($_SESSION['user_id'])) { ?>
     <?php
     exit();
 }
+$nft_ref_id = $_GET['ref_id'];
 const pageName = 'My Inventory';
 const rootDir = '/home/multistream6/domains/caketoolnftmarketplace.com/public_html/';
 include_once (rootDir.'includes/generalConfig.php');
 include_once (rootDir.'includes/core.php');
 include_once (rootDir.'partials/users/header/main.php');
+
 ?>
 
 <div class="py-5"></div>
