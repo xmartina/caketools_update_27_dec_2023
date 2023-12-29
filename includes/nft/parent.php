@@ -1,11 +1,12 @@
 <?php
 include_once (rootDir.'includes/url_checks/main.php');
-if ($directory == edit_nft_admin) {
+if (edit_nft_admin) {
     $nft_ref_id = $_GET['ref_id'];
     return $nft_ref_id;
-} elseif ($directory == edit_nft){
+//} elseif ($directory == edit_nft){
+} elseif (edit_nft){
     $nft_ref_id = $_GET['ref_id'];
-} elseif ($directory == nft_details){
+} elseif (nft_details){
     $nft_ref_id = $_GET['ref_id'];
     return $nft_ref_id;
 }

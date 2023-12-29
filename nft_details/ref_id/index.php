@@ -1,5 +1,5 @@
 <?php
 include_once (rootDir.'nft_details/index.php');
 //echo $directory == nft_details;
-echo $directory;
+echo nft_details;
 echo 1;
