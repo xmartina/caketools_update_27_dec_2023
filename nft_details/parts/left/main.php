@@ -1,3 +1,3 @@
 <div class="image">
-    <img src="/assets/images/item-details.jpg" alt="Image">
+    <img src="/assets/images/<?=$nft_img ?>" alt="<?=$nft_name ?>">
 </div>

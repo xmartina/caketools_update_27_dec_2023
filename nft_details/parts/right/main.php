@@ -1,7 +1,7 @@
 <div class="content">
     <div class="content-top">
         <div class="author">
-            <img src="/assets/images/author/author-detail-3.png" alt="Image">
+            <img src="/assets/images/author/<?= $nft_category_img ?>" alt="Image">
             <h6 class="title">Trending Arts</h6>
         </div>
         <div class="wishlish">
