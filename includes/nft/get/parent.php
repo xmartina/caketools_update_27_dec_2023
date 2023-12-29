@@ -15,6 +15,7 @@ $nft_ref_id = $row['ref_id'];
 $nft_creator_id = $row['created_user_id'];
 $nft_name = $row['name'];
 $nft_description = $row['description'];
+$nft_img = $row['img'];
 $nft_current_owner_id = $row['current_owner_id'];
 $nft_category = $row['category'];
 $nft_price = $row['price'];
