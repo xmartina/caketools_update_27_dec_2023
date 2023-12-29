@@ -1,12 +1,17 @@
 <?php
 include_once (rootDir.'includes/url_checks/main.php');
-if (edit_nft_admin) {
-    $nft_ref_id = $_GET['ref_id'];
-    return $nft_ref_id;
-//} elseif ($directory == edit_nft){
-} elseif (edit_nft){
-    $nft_ref_id = $_GET['ref_id'];
-} elseif (nft_details){
+//if (edit_nft_admin) {
+//    $nft_ref_id = $_GET['ref_id'];
+//    return $nft_ref_id;
+////} elseif ($directory == edit_nft){
+//} elseif (edit_nft){
+//    $nft_ref_id = $_GET['ref_id'];
+//} elseif (nft_details){
+//    $nft_ref_id = $_GET['ref_id'];
+//    return $nft_ref_id;
+//}
+if ($keyIndex !== false && isset($parts[$keyIndex + 1])) {
+    $refIdValue = $parts[$keyIndex + 1];
     $nft_ref_id = $_GET['ref_id'];
     return $nft_ref_id;
 }
