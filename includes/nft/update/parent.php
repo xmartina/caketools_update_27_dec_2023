@@ -8,6 +8,11 @@ if ($directory == edit_nft_admin) {
         category = ?,  
         likes = ?
         WHERE ref_id = ? OR current_owner_id = ?";
+
+    $updateStmt = $conn->prepare($updateSql);
+    $updateStmt->bind_param("ssssiii", $new_nft_name, $new_nft_description, $new_nft_price, $new_nft_category, $new_nft_likes, $nft_current_owner_id, $nft_ref_id);
+    return $updateStmt;
+
 } else {
     // Get NFT Parent data
     $updateSql = "UPDATE nft_parent SET
@@ -16,7 +21,13 @@ if ($directory == edit_nft_admin) {
         price = ?,
         category = ?,  
         likes = ?
-        WHERE current_owner_id = ? OR ref_id = ?";
+        WHERE current_owner_id = ? ";
+
+    $updateStmt = $conn->prepare($updateSql);
+    $updateStmt->bind_param("ssssii", $new_nft_name, $new_nft_description, $new_nft_price, $new_nft_category, $new_nft_likes, $nft_current_owner_id);
+
+    return $updateStmt;
+
 }
 
 $updateStmt = $conn->prepare($updateSql);
