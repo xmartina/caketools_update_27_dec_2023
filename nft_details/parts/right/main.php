@@ -2,15 +2,18 @@
     <div class="content-top">
         <div class="author">
             <img src="/assets/images/author/<?= $nft_category_img ?>" alt="Image">
-            <h6 class="title">Trending Arts</h6>
+            <h6 class="title"><?= $nft_category_name ?></h6>
         </div>
         <div class="wishlish">
             <div class="number-wishlish"><i class="far fa-heart"></i>68</div>
+            <?php if (isset($user_id)) {?>
             <div class="option btn-option"><i class="far fa-ellipsis-h"></i>
                 <div class="option_popup">
                     <a href="#">Delete</a>
                     <a href="#">Edit</a>
-                </div></div>
+                </div>
+            </div>
+            <?php } ?>
         </div>
     </div>
     <h2 class="title-detail">Wicked Cranium #4449</h2>
