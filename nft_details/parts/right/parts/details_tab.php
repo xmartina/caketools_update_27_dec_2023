@@ -4,15 +4,15 @@
             <div class="author">
                 <div class="heading">Current Owner</div>
                 <div class="infor">
-                    <img src="/assets/images/author/<?= $current_owner_img ?>" alt="Image">
-                    <h6 class="name">Surrogatess</h6>
+                    <img src="/assets/images/author/<?= $nft_current_owner_img ?>" alt="Image">
+                    <h6 class="name"><?=$nft_current_owner_name?></h6>
                 </div>
             </div>
             <div class="author">
                 <div class="heading">Creator</div>
                 <div class="infor">
                     <img src="/assets/images/author/<?= $nft_creator_img ?>" alt="Image">
-                    <h6 class="name">Truman Wallaker</h6>
+                    <h6 class="name"><?= $nft_creator_name ?></h6>
                 </div>
             </div>
         </div>

@@ -26,6 +26,5 @@ $nft_price = $row['nft_price'];
 $nft_likes = $row['likes'];
 $nft_date_created = $row['date_created'];
 $nft_time_created = $row['time_created'];
-$nft_creator_img = $row['nft_creator_img'];
-$current_owner_img = $row['current_owner_img'];
+
 
