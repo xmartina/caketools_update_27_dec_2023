@@ -12,7 +12,9 @@ session_start();
 const pageName = 'My Inventory';
 const rootDir = '/home/multistream6/domains/caketoolnftmarketplace.com/public_html/';
 include_once (rootDir.'includes/generalConfig.php');
+$nft_ref_id = $_GET['ref_id'];
 include_once (rootDir.'includes/core.php');
+include_once (rootDir.'includes/nft_core.php');
 include_once (rootDir.'partials/users/header/main.php');
 
 ?>

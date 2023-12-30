@@ -16,5 +16,4 @@ if (isset($_POST['logout'])){
     exit();
 
 }
-include_once (rootDir.'includes/nft/parent.php');
 include_once (rootDir.'includes/users/main.php');
