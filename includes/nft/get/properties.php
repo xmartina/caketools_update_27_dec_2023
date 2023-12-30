@@ -4,7 +4,7 @@
 //    return $sql;
 //} else {
 //Get NFT Parent data
-    $sql = "SELECT * FROM nft_properties WHERE parent_id = $nft_id";
+    $sql = "SELECT * FROM nft_properties WHERE p_parent_id = $nft_id";
 //    return $sql;
 //}
 //$sql = "SELECT * FROM nft_parent WHERE ref_id = $nft_ref_id OR current_owner_id = $user_id";
