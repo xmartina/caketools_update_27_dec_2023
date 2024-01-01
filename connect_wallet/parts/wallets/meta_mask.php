@@ -18,16 +18,16 @@ if ($result->num_rows > 0) {
         // Map numeric values to corresponding names
         switch ($wallet_key) {
             case 1:
-                $wallet_key = 'metamask';
+                $wallet_key_name = 'metamask';
                 break;
             case 2:
-                $wallet_key = 'binance';
+                $wallet_key_name = 'binance';
                 break;
             case 3:
-                $wallet_key = 'coinbase';
+                $wallet_key_name = 'coinbase';
                 break;
             case 4:
-                $wallet_key = 'WalletConnect';
+                $wallet_key_name = 'WalletConnect';
                 break;
         }
 
@@ -41,15 +41,16 @@ if ($result->num_rows > 0) {
             case 0:
                 $wallet_status = 'not connected';
                 break;
-        } ?>
-        <div class="col-lg-4 col-md-6" data-toggle="modal" data-target="#<?=$wallet_key?>">
+        }
+        ?>
+        <div class="col-lg-4 col-md-6" data-toggle="modal" data-target="#modal<?=$wallet_key_name?>">
             <div class="tf-wallet">
                 <div class="icon">
                     <img src="/assets/images/svg/<?= $wallet_img ?>" alt="Image">
-                    <span class="label"><?=$wallet_status?></span>
+                    <span class="label"><?= $wallet_status ?></span>
                 </div>
-                <h6 class="title"><a href="#"> <?=$wallet_name?></a></h6>
-                <p class="content"><?=$wallet_description?></p>
+                <h6 class="title"><a href="#"> <?= $wallet_name ?></a></h6>
+                <p class="content"><?= $wallet_description ?></p>
             </div>
         </div>
         <?php
