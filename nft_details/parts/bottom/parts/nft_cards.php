@@ -31,7 +31,7 @@ while ($nftData = $result->fetch_assoc()) {
         </div>
         <div class="features">
             <div class="product-media">
-                <img src="/assets/images/product/<?=$nft_img?>" alt="images">
+                <img src="/assets/images/<?=$nft_img?>" alt="images">
             </div>
             <div class="rain-drop1"><img src="/assets/images/icon/rain1.svg" alt="images"></div>
             <div class="rain-drop2"><img src="/assets/images/icon/rain2.svg" alt="images"></div>
