@@ -6,7 +6,7 @@
                     <h4 class="heading">Explore More</h4>
                 </div>
             </div>
-            <?php include_once ('nft_details/parts/bottom/parts/nft_cards.php');?>
+            <?php include_once (rootDir.'nft_details/parts/bottom/parts/nft_cards.php');?>
         </div>
     </div>
 </section>
