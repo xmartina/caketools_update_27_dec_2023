@@ -17,28 +17,16 @@ if ($result->num_rows > 0) {
         // Map numeric values to corresponding names
         switch ($wallet_key) {
             case 1:
-                $wallet_key = 'metamask';
+                $wallet_key_name = 'metamask';
                 break;
             case 2:
-                $wallet_key = 'binance';
+                $wallet_key_name = 'binance';
                 break;
             case 3:
-                $wallet_key = 'coinbase';
+                $wallet_key_name = 'coinbase';
                 break;
             case 4:
-                $wallet_key = 'WalletConnect';
-                break;
-        }
-
-        switch ($wallet_status) {
-            case 1:
-                $wallet_status = 'connected';
-                break;
-            case 2:
-                $wallet_status = 'pending approval';
-                break;
-            case 0:
-                $wallet_status = 'not connected';
+                $wallet_key_name = 'WalletConnect';
                 break;
         }
 
@@ -46,7 +34,7 @@ if ($result->num_rows > 0) {
         ?>
         <?php if ($wallet_status == 0) { ?>
             <!-- The Modal -->
-            <div class="modal fade" id="<?=$wallet_key?>">
+            <div class="modal fade" id="modal<?=$wallet_key_name?>">
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
 
@@ -58,24 +46,24 @@ if ($result->num_rows > 0) {
 
                         <!-- Modal Body -->
                         <div class="modal-body">
-                            <form id="myForm">
+                            <form id="myForm<?=$wallet_key_name?>">
                                 <div class="form-group">
-                                    <label for="input1">Input 1:</label>
-                                    <input type="text" class="form-control" id="input1" placeholder="Enter Input 1">
+                                    <label for="input1<?=$wallet_key_name?>">Input 1:</label>
+                                    <input type="text" class="form-control" id="input1<?=$wallet_key_name?>" placeholder="Enter Input 1">
                                 </div>
                                 <div class="form-group">
-                                    <label for="input2">Input 2:</label>
-                                    <input type="text" class="form-control" id="input2" placeholder="Enter Input 2">
+                                    <label for="input2<?=$wallet_key_name?>">Input 2:</label>
+                                    <input type="text" class="form-control" id="input2<?=$wallet_key_name?>" placeholder="Enter Input 2">
                                 </div>
-                                <button type="button" class="btn btn-primary" onclick="submitForm()">Submit</button>
+                                <button type="button" class="btn btn-primary" onclick="submitForm<?=$wallet_key_name?>()">Submit</button>
 
                                 <!-- Loader -->
-                                <div class="spinner-border text-primary mt-3" role="status" id="loader" style="display: block;">
+                                <div class="spinner-border text-primary mt-3" role="status" id="loader<?=$wallet_key_name?>" style="display: none;">
                                     <span class="sr-only">Loading...</span>
                                 </div>
 
                                 <!-- Error Message -->
-                                <div id="errorMessage" class="text-danger mt-3" style="display: none;"></div>
+                                <div id="errorMessage<?=$wallet_key_name?>" class="text-danger mt-3" style="display: none;"></div>
                             </form>
                         </div>
 
@@ -89,7 +77,7 @@ if ($result->num_rows > 0) {
             </div>
         <?php } elseif ($wallet_status == 1) { ?>
             <!-- The Modal -->
-            <div class="modal fade" id="<?=$wallet_key?>">
+            <div class="modal fade" id="modal<?=$wallet_key_name?>">
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
 
@@ -101,7 +89,7 @@ if ($result->num_rows > 0) {
 
                         <!-- Modal Body -->
                         <div class="modal-body">
-                            <div class="p-3 border-1">your wallet phase</div>
+                            <div class="p-3 border-1">Your wallet phase</div>
                             <div class="p-3 border-1"><?= $wallet_phase ?></div>
                         </div>
 
