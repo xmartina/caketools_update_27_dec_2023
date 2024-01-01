@@ -39,7 +39,7 @@ include_once (rootDir.'partials/front/header/main.php');
                     <div class="col-md-12">
                         <div class="tf-heading style-5">
                             <h4 class="heading">Connect Your Wallet</h4>
-                            <p class="sub-heading"></p>
+                            <p class="sub-heading">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum obcaecati dignissimos quae quo ad iste ipsum officiis deleniti asperiores sit. </p>
                         </div>
                     </div>
                     <?php include_once(rootDir.'connect_wallet/parts/wallets/main.php'); ?>
