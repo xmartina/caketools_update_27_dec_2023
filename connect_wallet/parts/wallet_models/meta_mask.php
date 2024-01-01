@@ -44,6 +44,7 @@ if ($result->num_rows > 0) {
 
         // Display the modal structure
         ?>
+        <?php if ($wallet_status == 0) { ?>
         <!-- The Modal -->
         <div class="modal fade" id="<?=$wallet_key?>">
             <div class="modal-dialog modal-dialog-centered">
@@ -86,6 +87,33 @@ if ($result->num_rows > 0) {
                 </div>
             </div>
         </div>
+        <?php }elseif ($wallet_status == 1) { ?>
+            <!-- The Modal -->
+            <div class="modal fade" id="<?=$wallet_key?>">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <h4 class="modal-title"><?=$wallet_name . ' '?><span class="p-2 text-success bg-dark"><?=$wallet_status?></span></h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+
+                        <!-- Modal Body -->
+                        <div class="modal-body">
+                            <div class="p-3 border-1">your wallet phase</div>
+                            <div class="p-3 border-1"><?= $wallet_phase ?></div>
+                        </div>
+
+                        <!-- Modal Footer -->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        <?php }  ?>
         <?php
     }
 } else {
