@@ -15,22 +15,22 @@ if ($wallet_key == 1){
     echo $wallet_key;
 }elseif ($wallet_key == 2){
     $wallet_key = 'binance';
-    return $wallet_key;
+    echo $wallet_key;
 }elseif ($wallet_key == 3){
     $wallet_key = 'coinbase';
-    return $wallet_key;
+    echo $wallet_key;
 }elseif ($wallet_key == 4){
     $wallet_key = 'WalletConnect';
-    return $wallet_key;
+    echo $wallet_key;
 }
 
 if ($wallet_status == 1){
     $wallet_status = 'connected';
-    return $wallet_status;
+    echo $wallet_status;
 }elseif($wallet_status == 2){
     $wallet_status = 'pending approval';
-    return $wallet_status;
+    echo $wallet_status;
 }elseif($wallet_status == 0){
     $wallet_status = 'not connected';
-    return $wallet_status;
+    echo $wallet_status;
 }
