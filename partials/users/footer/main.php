@@ -77,7 +77,7 @@
 </div>
 <!-- /#wrapper -->
 
-<?php include_once('partials/users/footer/parts/popup_bid.php');  ?>
+<?php include_once(rootDir.'partials/users/footer/parts/popup_bid.php');  ?>
 
 <a id="scroll-top"></a>
 
