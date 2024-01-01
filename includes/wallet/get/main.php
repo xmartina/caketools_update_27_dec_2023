@@ -12,25 +12,18 @@ $wallet_key = $row['wallet_key']; // name of wallet 1=>metamask, 2=>binance, 3=>
 $wallet_status = $row['wallet_status']; // 0=not connected 1=connected 2=pending approval
 if ($wallet_key == 1){
     $wallet_key = 'metamask';
-    echo $wallet_key;
 }elseif ($wallet_key == 2){
     $wallet_key = 'binance';
-    echo $wallet_key;
 }elseif ($wallet_key == 3){
     $wallet_key = 'coinbase';
-    echo $wallet_key;
 }elseif ($wallet_key == 4){
     $wallet_key = 'WalletConnect';
-    echo $wallet_key;
 }
 
 if ($wallet_status == 1){
     $wallet_status = 'connected';
-    echo $wallet_status;
 }elseif($wallet_status == 2){
     $wallet_status = 'pending approval';
-    echo $wallet_status;
 }elseif($wallet_status == 0){
     $wallet_status = 'not connected';
-    echo $wallet_status;
 }
