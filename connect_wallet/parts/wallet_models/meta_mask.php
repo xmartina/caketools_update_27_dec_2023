@@ -14,6 +14,17 @@ if ($result->num_rows > 0) {
         $wallet_key = $row['wallet_key']; // name of wallet 1=>metamask, 2=>binance, 3=>coinbase, 4=>walletConnect
         $wallet_status = $row['wallet_status']; // 0=not connected 1=connected 2=pending approval
 
+        switch ($wallet_status) {
+            case 0:
+                $wallet_status = 'not connected';
+                break;
+            case 1:
+                $wallet_status = 'connected';
+                break;
+            case 2:
+                $wallet_status = 'pending approval';
+                break;
+        }
         // Map numeric values to corresponding names
         switch ($wallet_key) {
             case 1:
