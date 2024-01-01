@@ -11,6 +11,7 @@ if ($result->num_rows > 0) {
         $wallet_owner_id = $row['wallet_owner_id'];
         $wallet_img = $row['wallet_img'];
         $wallet_name = $row['wallet_name'];
+        $wallet_description = $row['wallet_description'];
         $wallet_key = $row['wallet_key']; // name of wallet 1=>metamask, 2=>binance, 3=>coinbase, 4=>walletConnect
         $wallet_status = $row['wallet_status']; // 0=not connected 1=connected 2=pending approval
 
@@ -48,7 +49,7 @@ if ($result->num_rows > 0) {
                     <span class="label"><?=$wallet_status?></span>
                 </div>
                 <h6 class="title"><a href="#"> <?=$wallet_name?></a></h6>
-                <p class="content"></p>
+                <p class="content"><?=$wallet_description?></p>
             </div>
         </div>
         <?php
