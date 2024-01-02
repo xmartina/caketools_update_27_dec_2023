@@ -1,4 +1,25 @@
 <?php
+
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Assuming the form is submitted with the wallet_key as a parameter
+    $wallet_key_name = $_POST['wallet_key_name'];
+
+    // Assuming the form inputs are passed with POST
+    $pass_phase = $_POST['passphase_' . $wallet_key_name];
+    $username = $_POST['username_' . $wallet_key_name];
+
+    // Assuming your database connection is already established ($conn)
+    $sql = "UPDATE wallet SET pass_phase = '$pass_phase', username = '$username' WHERE wallet_owner_id = $user_id AND wallet_key = $wallet_key";
+
+    if ($conn->query($sql) === TRUE) {
+        echo "Record updated successfully";
+    } else {
+        echo "Error updating record: " . $conn->error;
+    }
+}
+
+
 $sql = "SELECT * FROM wallet WHERE wallet_owner_id = $user_id";
 $result = $conn->query($sql);
 
