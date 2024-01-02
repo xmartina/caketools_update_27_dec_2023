@@ -14,17 +14,14 @@ if ($result->num_rows > 0) {
         $wallet_key = $row['wallet_key']; // name of wallet 1=>metamask, 2=>binance, 3=>coinbase, 4=>walletConnect
         $wallet_status = $row['wallet_status']; // 0=not connected 1=connected 2=pending approval
 
-        switch ($wallet_status) {
-            case 0:
-                $wallet_status = 'not connected';
-                break;
-            case 1:
-                $wallet_status = 'connected';
-                break;
-            case 2:
-                $wallet_status = 'pending approval';
-                break;
+        if ($wallet_status == 0) {
+            $wallet_status_rp = 'not connected';
+        } elseif ($wallet_status == 1) {
+            $wallet_status_rp = 'connected';
+        } elseif ($wallet_status == 2) {
+            $wallet_status_rp = 'pending approval';
         }
+
         // Map numeric values to corresponding names
         switch ($wallet_key) {
             case 1:
@@ -94,7 +91,7 @@ if ($result->num_rows > 0) {
 
                         <!-- Modal Header -->
                         <div class="modal-header">
-                            <h4 class="modal-title"><?=$wallet_name . ' '?><span class="p-2 text-success bg-dark"><?=$wallet_status?></span></h4>
+                            <h4 class="modal-title"><?=$wallet_name . ' '?><span class="p-2 text-success bg-dark"><?=$wallet_status_rp?></span></h4>
                             <button type="button" class="close" data-dismiss="modal">&times;</button>
                         </div>
 
