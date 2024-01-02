@@ -103,6 +103,7 @@ if ($result->num_rows > 0) {
                 }
             </script>
 
+
         <?php } elseif ($wallet_status == 1) { ?>
             <!-- The Modal -->
             <div class="modal fade" id="modal<?=$wallet_key_name?>">
