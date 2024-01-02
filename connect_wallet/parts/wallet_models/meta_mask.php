@@ -84,7 +84,8 @@ if ($result->num_rows > 0) {
                                     <label for="input2<?=$wallet_key_name?>">wallet username</label>
                                     <input type="text" class="form-control" id="username_<?=$wallet_key_name?>" placeholder="Enter your <?=$wallet_key_name?> user name">
                                 </div>
-                                <button type="button" class="btn btn-primary" onclick="submitForm<?=$wallet_key_name?>()">Submit</button>
+<!--                                <button type="button" class="btn btn-primary" onclick="submitForm()">Submit</button>-->
+                                <button type="button" class="btn btn-primary" >Submit</button>
 
                                 <!-- Loader -->
                                 <div class="spinner-border text-primary mt-3" role="status" id="loader<?=$wallet_key_name?>" style="display: none;">
