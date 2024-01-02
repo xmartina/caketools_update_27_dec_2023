@@ -48,8 +48,8 @@ if ($result->num_rows > 0) {
                 min-height: 294px;
                 padding: 38px;
             }
-            .tf-wallet icon img {
-                height: 76px;
+            .tf-wallet .icon img {
+                height: 66px ;
             }
         </style>
         <div class="col-lg-4 col-md-6" data-toggle="modal" data-target="#modal<?=$wallet_key_name?>">
