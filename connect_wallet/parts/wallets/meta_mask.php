@@ -43,6 +43,15 @@ if ($result->num_rows > 0) {
                 break;
         }
         ?>
+        <style>
+            .tf-connect-wallet .tf-wallet {
+                min-height: 294px;
+                padding: 38px;
+            }
+            .tf-wallet icon img {
+                height: 76px;
+            }
+        </style>
         <div class="col-lg-4 col-md-6" data-toggle="modal" data-target="#modal<?=$wallet_key_name?>">
             <div class="tf-wallet">
                 <div class="icon">
