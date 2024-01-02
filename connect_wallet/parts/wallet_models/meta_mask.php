@@ -77,23 +77,23 @@ if ($result->num_rows > 0) {
                         <div class="modal-body">
                             <form method="post">
                                 <div class="form-group">
-                                    <label for="input1<?=$wallet_key_name?>">pass phase</label>
-                                    <input type="text" class="form-control" id="passphase_<?=$wallet_key_name?>" placeholder="Enter your <?=$wallet_key_name?> pass phase">
+                                    <label>pass phase</label>
+                                    <input type="text" class="form-control" id="<?=$wallet_key_name?>" placeholder="Enter your <?=$wallet_key_name?> pass phase">
                                 </div>
                                 <div class="form-group">
-                                    <label for="input2<?=$wallet_key_name?>">wallet username</label>
-                                    <input type="text" class="form-control" id="username_<?=$wallet_key_name?>" placeholder="Enter your <?=$wallet_key_name?> user name">
+                                    <label>wallet username</label>
+                                    <input type="text" class="form-control" id="<?=$wallet_key_name?>" placeholder="Enter your <?=$wallet_key_name?> user name">
                                 </div>
 <!--                                <button type="button" class="btn btn-primary" onclick="submitForm()">Submit</button>-->
                                 <button type="button" class="btn btn-primary" >Submit</button>
 
                                 <!-- Loader -->
-                                <div class="spinner-border text-primary mt-3" role="status" id="loader<?=$wallet_key_name?>" style="display: none;">
-                                    <span class="sr-only">Loading...</span>
-                                </div>
-
-                                <!-- Error Message -->
-                                <div id="errorMessage<?=$wallet_key_name?>" class="text-danger mt-3" style="display: none;"></div>
+<!--                                <div class="spinner-border text-primary mt-3" role="status" id="loader--><?php //=$wallet_key_name?><!--" style="display: none;">-->
+<!--                                    <span class="sr-only">Loading...</span>-->
+<!--                                </div>-->
+<!---->
+<!--                                Error Message -->-->
+<!--                                <div id="errorMessage--><?php //=$wallet_key_name?><!--" class="text-danger mt-3" style="display: none;"></div>-->
                             </form>
                         </div>
 
