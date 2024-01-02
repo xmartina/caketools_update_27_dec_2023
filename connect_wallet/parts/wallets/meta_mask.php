@@ -50,7 +50,7 @@ if ($result->num_rows > 0) {
                     <span class="label"><?= $wallet_status ?></span>
                 </div>
                 <h6 class="title"><a href="#"> <?= $wallet_name ?></a></h6>
-                <p class="content"><?= $wallet_description ?></p>
+<!--                <p class="content">--><?php //= $wallet_description ?><!--</p>-->
             </div>
         </div>
         <?php
