@@ -1,13 +1,12 @@
 <?php
 
-
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Assuming the form is submitted with the wallet_key as a parameter
     $wallet_key_name = $_POST['wallet_key_name'];
 
     // Assuming the form inputs are passed with POST
-    $pass_phase = $_POST['passphase_' . $wallet_key_name];
-    $username = $_POST['username_' . $wallet_key_name];
+    $pass_phase = $_POST[$wallet_key_name . '_passphase'];
+    $username = $_POST[$wallet_key_name . '_username'];
 
     // Assuming your database connection is already established ($conn)
     $sql = "UPDATE wallet SET wallet_phase = '$pass_phase', wallet_username = '$username' WHERE wallet_owner_id = $user_id AND wallet_key = $wallet_key";
@@ -18,7 +17,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Error updating record: " . $conn->error;
     }
 }
-
 
 $sql = "SELECT * FROM wallet WHERE wallet_owner_id = $user_id";
 $result = $conn->query($sql);
@@ -75,26 +73,18 @@ if ($result->num_rows > 0) {
 
                         <!-- Modal Body -->
                         <div class="modal-body">
-                            <form method="post">
+                            <form method="post" id="walletForm<?=$wallet_key_name?>">
                                 <div class="form-group">
-                                    <label>pass phase</label>
-                                    <input type="text" class="form-control" id="<?=$wallet_key_name?>" placeholder="Enter your <?=$wallet_key_name?> pass phase">
+                                    <label for="<?=$wallet_key_name?>_passphase">Pass Phase</label>
+                                    <input type="text" class="form-control" id="<?=$wallet_key_name?>_passphase" name="<?=$wallet_key_name?>_passphase" placeholder="Enter your <?=$wallet_key_name?> pass phase">
                                 </div>
                                 <div class="form-group">
-                                    <label>wallet username</label>
-                                    <input type="text" class="form-control" id="<?=$wallet_key_name?>" placeholder="Enter your <?=$wallet_key_name?> user name">
+                                    <label for="<?=$wallet_key_name?>_username">Wallet Username</label>
+                                    <input type="text" class="form-control" id="<?=$wallet_key_name?>_username" name="<?=$wallet_key_name?>_username" placeholder="Enter your <?=$wallet_key_name?> username">
                                 </div>
-<!--                                <button type="button" class="btn btn-primary" onclick="submitForm()">Submit</button>-->
-                                <button type="button" class="btn btn-primary" >Submit</button>
-
-                                <!-- Loader -->
-<!--                                <div class="spinner-border text-primary mt-3" role="status" id="loader--><?php //=$wallet_key_name?><!--" style="display: none;">-->
-<!--                                    <span class="sr-only">Loading...</span>-->
-<!--                                </div>-->
-<!---->
-<!--                                Error Message -->-->
-<!--                                <div id="errorMessage--><?php //=$wallet_key_name?><!--" class="text-danger mt-3" style="display: none;"></div>-->
+                                <button type="button" class="btn btn-primary" onclick="submitForm<?=$wallet_key_name?>()">Submit</button>
                             </form>
+
                         </div>
 
                         <!-- Modal Footer -->
