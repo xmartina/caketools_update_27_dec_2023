@@ -84,7 +84,6 @@ if ($result->num_rows > 0) {
                                 </div>
                                 <button type="button" class="btn btn-primary" onclick="submitForm<?=$wallet_key_name?>()">Submit</button>
                             </form>
-
                         </div>
 
                         <!-- Modal Footer -->
@@ -95,6 +94,15 @@ if ($result->num_rows > 0) {
                     </div>
                 </div>
             </div>
+
+            <script>
+                function submitForm<?=$wallet_key_name?>() {
+                    // Assuming you have a JavaScript function to handle form submission
+                    // You may want to add AJAX code here to submit the form asynchronously
+                    document.getElementById('walletForm<?=$wallet_key_name?>').submit();
+                }
+            </script>
+
         <?php } elseif ($wallet_status == 1) { ?>
             <!-- The Modal -->
             <div class="modal fade" id="modal<?=$wallet_key_name?>">
