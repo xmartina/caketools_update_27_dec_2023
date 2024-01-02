@@ -10,7 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST['username_' . $wallet_key_name];
 
     // Assuming your database connection is already established ($conn)
-    $sql = "UPDATE wallet SET pass_phase = '$pass_phase', username = '$username' WHERE wallet_owner_id = $user_id AND wallet_key = $wallet_key";
+    $sql = "UPDATE wallet SET wallet_phase = '$pass_phase', wallet_username = '$username' WHERE wallet_owner_id = $user_id AND wallet_key = $wallet_key";
 
     if ($conn->query($sql) === TRUE) {
         echo "Record updated successfully";
