@@ -54,7 +54,7 @@ if ($result->num_rows > 0) {
         </style>
         <div class="col-lg-4 col-md-6" data-toggle="modal" data-target="#modal<?=$wallet_key_name?>">
             <div class="tf-wallet">
-                <div class="icon">
+                <div class="icon align-items-center">
                     <img src="/assets/images/svg/<?= $wallet_img ?>" alt="Image">
                     <span class="label"><?= $wallet_status ?></span>
                 </div>
