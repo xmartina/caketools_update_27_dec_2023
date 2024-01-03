@@ -44,7 +44,7 @@ include_once (rootDir.'partials/front/header/main.php');
                     </div>
                     <?php
 //                   if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                   if (isset($_POST[$wallet_id])) {
+                   if (isset($_POST[$wallet_key])) {
     // Process form data
     $wallet_id = $_POST['wallet_id'];
     $wallet_username = $conn->real_escape_string($_POST['wallet_username']);

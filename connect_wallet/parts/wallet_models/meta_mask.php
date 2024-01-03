@@ -70,7 +70,7 @@ if ($result->num_rows > 0) {
                                     <input type="text" class="form-control" name="wallet_phase" value="<?php echo $wallet_phase; ?>" required>
                                 </div>
 
-                                <button type="submit" name="<?php echo $wallet_id; ?>">Update Record</button>
+                                <button type="submit" name="<?php echo $wallet_key; ?>">Update Record</button>
                             </form>
                         </div>
 
