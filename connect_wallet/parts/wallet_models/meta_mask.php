@@ -12,7 +12,7 @@ if (isset($_POST[$wallet_name])) {
     $sql = "UPDATE wallet SET wallet_phase = '$wallet_phase', wallet_username = '$wallet_username' WHERE wallet_owner_id = $user_id AND wallet_id = $wallet_id";
 
     if ($conn->query($sql) === TRUE) {
-        echo "Record updated successfully";
+        header("location: /connect_wallet?success-added");
     } else {
         echo "Error updating record: " . $conn->error;
     }
