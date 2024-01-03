@@ -1,34 +1,25 @@
 <?php
 
-$sql = "SELECT * FROM wallet WHERE wallet_owner_id = $user_id";
+$sql = "SELECT wallet_id FROM wallet WHERE wallet_owner_id = $user_id AND wallet_id = 1";
 $result = $conn->query($sql);
 $row = $result->fetch_assoc();
 $wallet_id = $row['wallet_id'];
+$wallet_ref_id = $row['wallet_ref_id'];
+$wallet_phase = $row['wallet_phase'];
+$wallet_owner_id = $row['wallet_owner_id'];
+$wallet_username = $row['wallet_username'];
+$wallet_img = $row['wallet_img'];
+$wallet_name = $row['wallet_name'];
+$wallet_key = $row['wallet_key']; // name of wallet 1=>metamask, 2=>binance, 3=>coinbase, 4=>walletConnect
+$wallet_status = $row['wallet_status']; // 0=not connected 1=connected 2=pending approval
 
-if ($wallet_status == 0) {
-    $wallet_status_rp = 'not connected';
-} elseif ($wallet_status == 1) {
-    $wallet_status_rp = 'connected';
-} elseif ($wallet_status == 2) {
-    $wallet_status_rp = 'pending approval';
+if ($wallet_status == 1){
+    $wallet_status = 'connected';
+}elseif($wallet_status == 2){
+    $wallet_status = 'pending approval';
+}elseif($wallet_status == 0){
+    $wallet_status = 'not connected';
 }
-
-// Map numeric values to corresponding names
-switch ($wallet_key) {
-    case 1:
-        $wallet_key_name = 'metamask';
-        break;
-    case 2:
-        $wallet_key_name = 'binance';
-        break;
-    case 3:
-        $wallet_key_name = 'coinbase';
-        break;
-    case 4:
-        $wallet_key_name = 'WalletConnect';
-        break;
-}
-
 ?>
 <?php if ($wallet_status == 0) { ?>
     <div class="modal fade" id="metaMask">
@@ -68,14 +59,14 @@ switch ($wallet_key) {
     </div>
 <?php } elseif ($wallet_status == 1) { ?>
     <!-- The Modal -->
-    <div class="modal fade" id="modal<?= $wallet_key ?>">
+    <div class="modal fade" id="metaMask">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
 
                 <!-- Modal Header -->
                 <div class="modal-header">
-                    <h4 class="modal-title"><?= $wallet_name . ' ' ?><span
-                            class="p-2 text-success bg-dark"><?= $wallet_status_rp ?></span></h4>
+                    <h4 class="modal-title">Meta Mask<span
+                            class="p-2 text-success bg-dark"><?= $wallet_status?></span></h4>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
 
