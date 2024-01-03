@@ -73,7 +73,7 @@ if ($result->num_rows > 0) {
 
                         <!-- Modal Body -->
                         <div class="modal-body">
-                            <form method="post">
+                            <form method="post" id="walletForm<?=$wallet_key_name?>">
                                 <input type="hidden" value="<?$wallet_id?>" name="<?$wallet_id?>">
                                 <div class="form-group">
                                     <label>Pass Phase</label>
@@ -83,7 +83,7 @@ if ($result->num_rows > 0) {
                                     <label for="<?=$wallet_key_name?>_username">Wallet Username</label>
                                     <input type="text" class="form-control" name="wallet_username" placeholder="Enter your <?=$wallet_key_name?> username">
                                 </div>
-                                <button type="button" class="btn btn-primary" name="<?=$wallet_name?>">Submit</button>
+                                <button type="button" class="btn btn-primary" name="<?=$wallet_name?>" onclick="submitForm<?=$wallet_key_name?>()">Submit</button>
                             </form>
                         </div>
 
