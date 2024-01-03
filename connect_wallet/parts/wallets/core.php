@@ -58,7 +58,7 @@ if ($result->num_rows > 0) {
                 margin-bottom: 2px;
             }
         </style>
-        <div class="col-lg-4 col-md-6" data-toggle="modal" data-target="#modal<?=$wallet_id?>">
+        <div class="col-lg-4 col-md-6" data-toggle="modal" data-target="#modal<?=$wallet_key?>">
             <div class="tf-wallet">
                 <div class="icon align-items-center">
                     <img src="/assets/images/svg/<?= $wallet_img ?>" alt="Image">
