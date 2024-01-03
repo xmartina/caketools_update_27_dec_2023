@@ -13,13 +13,6 @@ $wallet_name = $row['wallet_name'];
 $wallet_key = $row['wallet_key']; // name of wallet 1=>metamask, 2=>binance, 3=>coinbase, 4=>walletConnect
 $wallet_status = $row['wallet_status']; // 0=not connected 1=connected 2=pending approval
 
-if ($wallet_status == 1){
-    $wallet_status = 'connected';
-}elseif($wallet_status == 2){
-    $wallet_status = 'pending approval';
-}elseif($wallet_status == 0){
-    $wallet_status = 'not connected';
-}
 ?>
 <?php if ($wallet_status == 0) { ?>
     <div class="modal fade" id="metaMask">
@@ -62,7 +55,15 @@ if ($wallet_status == 1){
     <div class="modal fade" id="metaMask">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
-
+<?php
+if ($wallet_status == 1){
+    $wallet_status = 'connected';
+}elseif($wallet_status == 2){
+    $wallet_status = 'pending approval';
+}elseif($wallet_status == 0){
+    $wallet_status = 'not connected';
+}
+?>
                 <!-- Modal Header -->
                 <div class="modal-header">
                     <h4 class="modal-title">Meta Mask<span
