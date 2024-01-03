@@ -2,7 +2,7 @@
 
 $sql = "SELECT * FROM wallet WHERE wallet_owner_id = $user_id";
 $result = $conn->query($sql);
-
+$wallet_id = $row['wallet_id'];
 if (isset($_POST[$wallet_id])) {
     $wallet_phase = $_POST['wallet_phase'];
     $wallet_username = $_POST['wallet_username'];
