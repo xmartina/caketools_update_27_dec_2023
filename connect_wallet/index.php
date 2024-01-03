@@ -48,7 +48,12 @@ if (isset($_POST['meta_mask'])) {
     $sql = "UPDATE wallet SET wallet_username = '$wallet_username', wallet_phase = '$wallet_phase' WHERE wallet_id = 2";
 
     if ($conn->query($sql) === TRUE) {
-        echo "Record updated successfully";
+
+        $update_status = "UPDATE wallet SET wallet_status = 2 WHERE wallet_id = 2";
+
+        if ($update_status){
+            echo "Record updated successfully";
+        }
     } else {
         echo "Error updating record: " . $conn->error;
     }
