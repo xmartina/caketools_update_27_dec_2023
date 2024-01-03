@@ -1,6 +1,6 @@
 <?php
 
-if (isset($_POST[$wallet_name])) {
+if (isset($_POST[$wallet_id])) {
 
     $wallet_phase = $_POST['wallet_phase'];
     $wallet_username = $_POST['wallet_username'];
@@ -83,7 +83,7 @@ if ($result->num_rows > 0) {
                                     <label for="<?=$wallet_key_name?>_username">Wallet Username</label>
                                     <input type="text" class="form-control" name="wallet_username" placeholder="Enter your <?=$wallet_key_name?> username">
                                 </div>
-                                <button type="submit" class="btn btn-primary" name="<?=$wallet_name?>">Submit</button>
+                                <button type="submit" class="btn btn-primary" name="<?=$wallet_id?>">Submit</button>
                             </form>
                         </div>
 
