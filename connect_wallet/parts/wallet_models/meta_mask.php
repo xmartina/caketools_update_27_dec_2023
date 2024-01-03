@@ -1,6 +1,6 @@
 <?php
 
-$sql = "SELECT wallet_id FROM wallet WHERE wallet_owner_id = $user_id AND wallet_id = 1";
+$sql = "SELECT * FROM wallet WHERE wallet_owner_id = $user_id AND wallet_id = 1";
 $result = $conn->query($sql);
 $row = $result->fetch_assoc();
 $wallet_id = $row['wallet_id'];
