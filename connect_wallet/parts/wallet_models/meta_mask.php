@@ -1,5 +1,8 @@
 <?php
 
+$sql = "SELECT * FROM wallet WHERE wallet_owner_id = $user_id";
+$result = $conn->query($sql);
+
 if (isset($_POST[$wallet_id])) {
     $wallet_phase = $_POST['wallet_phase'];
     $wallet_username = $_POST['wallet_username'];
@@ -14,9 +17,6 @@ if (isset($_POST[$wallet_id])) {
         echo "Error updating record: " . $conn->error;
     }
 }
-
-$sql = "SELECT * FROM wallet WHERE wallet_owner_id = $user_id";
-$result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
