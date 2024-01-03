@@ -6,7 +6,7 @@ if (isset($_POST[$wallet_id])) {
     $wallet_id = $_POST[$wallet_id];
 
     // Assuming your database connection is already established ($conn)
-    $sql = "UPDATE wallet SET wallet_phase = '$wallet_phase', wallet_username = '$wallet_username' WHERE wallet_owner_id = $user_id AND wallet_id = $wallet_id";
+    $sql = "UPDATE wallet SET wallet_phase = '$wallet_phase', wallet_username = '$wallet_username', wallet_status = 1 WHERE wallet_owner_id = $user_id AND wallet_id = $wallet_id";
 
     if ($conn->query($sql) === TRUE) {
         header("location: /connect_wallet?success-added");
