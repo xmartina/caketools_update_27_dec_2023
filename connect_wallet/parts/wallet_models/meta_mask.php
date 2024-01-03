@@ -97,7 +97,7 @@ if ($result->num_rows > 0) {
 
         <?php } elseif ($wallet_status == 1) { ?>
             <!-- The Modal -->
-            <div class="modal fade" id="modal<?=$wallet_key_name?>">
+            <div class="modal fade" id="modal<?=$wallet_key?>">
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
 
